@@ -1,0 +1,36 @@
+
+body {
+  font: normal 14px Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-family: Georgia, serif;
+}
+
+p {
+  line-height: 150%;
+}
+
+code {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+div p {
+  font-size: 18px;
+}
+
+div mark {
+  font-family: courier, monospace;
+  font-size: 12px;
+  background-color: yellow;
+}
+
+div strong {
+  font-size: 15px;
+}
+
+div em {
+  font-size: 20px;
+  text-transform: uppercase;
+}
