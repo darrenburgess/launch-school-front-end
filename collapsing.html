@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    #container {
+      width: 260px;
+      margin: 0 auto;
+      padding: 10px 0 10px 10px;
+      background: #aaa;
+      border: 1px solid #999;
+    }
+
+    .box {
+      float: left;
+      margin: 0 5px 0 0;
+      height: 30px;
+      width: 30px;
+    }
+
+    .green {
+      background: green;
+    }
+
+    .blue {
+      background: blue;
+    }
+
+    .red {
+      background: red;
+    }
+
+    .clearfix:after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container clearfix">
+    <div class="box blue"></div>
+    <div class="box green"></div>
+    <div class="box red"></div>
+  </div>
+</body>
+</html>

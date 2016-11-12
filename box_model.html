@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    div {
+      color: white;
+      padding: 45px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      margin: 0 0 0 220px;
+    }
+
+    .block {
+      width: 200px;
+      height: 200px;
+    }
+
+    .float {
+      float: left;
+    }
+
+    .clear {
+      clear: left;
+    }
+
+    .pink {
+      background: pink;
+    }
+
+    .blue {
+      background: blue;
+    }
+
+    .green {
+      background: green;
+    }
+
+    .orange {
+      background: orange;
+    }
+
+    .div1 {
+      background-color: blue;
+      width: 100%;
+      margin: 0 20px 0 0;
+      float: right;
+    } 
+
+    .hidden {
+      display: none;
+    }
+
+    .div2 {
+      background-color: green;
+      float: left;
+      width: 200px;
+      margin: 0 0 0 -220px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="div1 hidden">this is the content for this box</div>
+    <div class="div2 hidden">this is the content for the other box</div>
+  </div>
+
+  <div class="block pink float"></div>
+  <div class="block blue float"></div>
+  <div class="block green float clear"></div>
+  <div class="block orange clear"></div>
+</body>
+</html>
