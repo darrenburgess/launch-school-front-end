@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    article {
+      border: 10px solid grey;
+    }
+
+    aside {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      margin-left: -200px;
+      padding: 10px;
+      width: 400px;
+      height: 100px;
+      box-sizing: border-box;
+      background: lightgreen;
+      z-index: 2;
+    }
+
+    .greyout {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .6); 
+      z-index: 1;
+      height: 100vh;
+      width: 100vw;
+      color: white;
+    }
+
+    #littlebox {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      height: 20px;
+      width: 20px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <p>
+      Ipsum recusandae cupiditate esse eius provident adipisci aut unde voluptatem impedit tempore. Quibusdam tempore illo vel ex ullam? Ad modi ex officia quis assumenda nihil repellendus. Magnam iste eum suscipit.
+    </p>
+    <p>
+      Lorem non voluptate labore sit beatae exercitationem at! Iusto velit quae sunt ipsa repellendus explicabo eligendi impedit. Neque debitis expedita animi esse ducimus modi ex veritatis nostrum delectus quidem error.
+    </p>
+    <p>
+      Ipsum non odit consequatur pariatur aliquid architecto obcaecati pariatur. Suscipit quia aperiam illum repudiandae quasi minus hic! Quidem exercitationem modi eligendi exercitationem dolore? Similique praesentium dicta sapiente accusamus saepe? Corporis!
+    </p>
+    <p>
+      Amet quos aut aliquid quasi mollitia deleniti. Maxime accusantium neque distinctio aut unde architecto exercitationem ad nisi accusantium voluptatibus? Earum doloribus ipsa consequatur assumenda dolores! Quasi assumenda quibusdam a unde.
+    </p>
+    <p>
+      Amet ad dolore ad atque vitae. Soluta quis deleniti nesciunt ullam nesciunt velit mollitia! Minima consequatur quibusdam quos incidunt laudantium aut natus sequi dignissimos magnam, tempore! Expedita facere molestiae eos.
+    </p>
+  </article>
+  <aside>
+    <p>I am positioned</p>
+    <div id="littlebox"></div>
+  </aside>
+  <div class="greyout"></div>
+</body>
+</html>
