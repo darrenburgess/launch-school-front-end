@@ -1,0 +1,232 @@
+@import URL("reset.css");
+
+body { 
+  font-family: Helvetica, Arial, sans-serif;
+  color: #545454;
+}
+
+.container {
+  border: 1px solid black;
+  width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+h1, h2 {
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.5rem; 
+}
+
+h2 {
+  padding: 10px 0;
+}
+
+p {
+  line-height: 2.0rem;
+  color: #545454;
+}
+
+a {
+  text-decoration: none;
+  color: #545454;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+.wrapper {
+  margin: 20px 0;
+}
+
+.font-white {
+  color: white;
+}
+
+.border {
+  border: 2px dashed #545454;
+  width: 500px;
+  margin: 30px; 
+  padding: 30px;
+}
+
+section .inline-margin a {
+  margin: 30px;
+}
+
+section .inline-padding a {
+  padding: 30px; 
+  background: green;
+  color: white;
+}
+
+.box1 {
+  background: blue;
+}
+
+.box2 {
+  background: orange;
+  height: 60px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.box3 {
+  background: green;
+  width: 90px;
+}
+
+.clearfix::before, .clearfix::after {
+  display: block;
+  content: " ";
+}
+
+.clearfix::after {
+  clear: both; 
+}
+
+.box4 {
+  background: orange;
+  float: left;
+}
+
+.box5 {
+  background: blue;
+  float: right;
+}
+
+.box6 {
+  background: blue;
+  box-sizing: border-box;
+  padding-top: 20px;
+  text-align: center;
+  height: 60px;
+  width: 300px;
+  float: left;
+  color: white
+  
+}
+
+.box7 {
+  background: orange;
+  box-sizing: border-box;
+  padding-top: 20px;
+  text-align: center;
+  height: 60px;
+  width: 300px;
+  float: right;
+  color: white;
+}
+
+.a-to-block {
+  display: block;
+  background: lightblue;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin: 5px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 20px;
+  margin: 0 10px;
+  background: forestgreen;
+  color: white;
+  text-align: center;
+  width: 150px;
+}
+
+.float-left {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.float-box {
+  height: 100px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+.float-box1 {
+  width: 450px;
+  background: red;
+}
+
+.float-box2 {
+  width: 450px;
+  background: blue;
+}
+
+.float-box3 {
+  width: 900px;
+  background: green;
+  width: 900;
+  float: none;
+}
+
+code {
+  font-family: monospace;
+}
+
+#positioning ul {
+  margin: 0 50px;
+  font-style: italic;
+}
+
+#positioning ul li {
+  margin-bottom: 10px;
+}
+
+#fix-pos {
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  background-color: dodgerblue;
+  position: fixed;
+  opacity: 0.7;
+  left: 20px;
+  bottom: 20px;
+}
+
+#rel-pos {
+  height: 50px;
+  width: 220px;
+  border-radius: 10px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); 
+  position: relative;
+  top: 20px;
+  left: -20px;
+}
+
+.relative-position {
+  position: relative;
+}
+
+#abs-pos {
+  height: 50px;
+  width: 220px;
+  border-radius: 10px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  background-color: steelblue; 
+  position: absolute;
+  top: -15px;
+  left: 250px;
+}
+
