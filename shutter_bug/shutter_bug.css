@@ -1,1 +1,90 @@
 @import URL("reset.css");
+
+body {
+  width: 960px;
+  margin: 0 auto;
+  background: #d1dbbd;
+  background: linear-gradient(to bottom,  #d1dbbd 0%,#fcfff5 100%,#7db9e8 100%);
+  font-family: 'Roboto Condensed', sans-serif;
+  color: grey;
+}
+
+main {
+  padding: 32px;
+  margin-top: 30px;
+  box-sizing: border-box;
+  background: white;
+  box-shadow: 0 6px 8px 3px rgba(0,0,0,0.2);
+}
+
+header {
+  margin-top: 20px;
+}
+
+header h1 {
+  font-size: 30px;
+  color: black;
+  float: left;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+header img {
+  float: left;
+}
+
+header ul {
+  list-style-type: none;
+  float: right;
+  margin-right: 15px;
+  position: relative;
+  top: -16px;
+}
+
+header li {
+  display: inline-block;
+  width: 128px;
+  height: 45px;
+  background: #fcfff5;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 10px 10px 0 0;
+}
+
+header li:first-child {
+  background: #92aa9d;
+  color: #fcfff5;
+}
+
+main h1 {
+  font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+main p {
+  font-size: 12px;
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+
+main .tree {
+  float: right;
+  width: 330px;
+  height: auto;
+  margin-left: 30px;
+}
+
+footer p {
+  margin-top: 15px;
+  font-size: 10px;
+}
+
