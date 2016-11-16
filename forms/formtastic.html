@@ -146,5 +146,31 @@
       <input type="submit">
     </fieldset>
   </form>
+
+  <form action="#" method="get">
+    <h1>Select elements</h1>
+    <p>select elements allow a choice of multiple possible options</p>
+    <p>use multiple attribute to allow multiselect with command key</p>
+    <p>multiple send the name in parameter multiple times.</p>
+    <fieldset>
+      <select id="animals" name="animals" multiple>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="bird">Bird</option>
+      </select>
+      <select name="movie">
+        <option value=""></option>
+        <optgroup label="DVD">
+          <option>Frozen</option>
+          <option>Toy Story 3</option>
+        </optgroup>
+        <optgroup label="Blu-Ray">
+          <option>Monsters, Inc</option>
+          <option>WALL-E</option>
+        </optgroup>
+      </select>
+    </fieldset>
+    <input type="submit">
+  </form>
 </body>
 </html>
