@@ -42,15 +42,14 @@ header img {
   float: left;
 }
 
-header ul {
-  list-style-type: none;
+nav ul {
   float: right;
   margin-right: 15px;
   position: relative;
   top: -16px;
 }
 
-header li {
+nav li {
   display: inline-block;
   width: 128px;
   height: 45px;
@@ -60,9 +59,21 @@ header li {
   border-radius: 10px 10px 0 0;
 }
 
-header li:first-child {
-  background: #92aa9d;
+nav a {
+  display: block;
+  text-decoration: none;
+}
+
+nav a:first-child {
   color: #fcfff5;
+}
+
+nav ul li:nth-child(n + 2) a {
+  color: grey;
+}
+
+nav li:first-child {
+  background: #92aa9d;
 }
 
 main h1 {

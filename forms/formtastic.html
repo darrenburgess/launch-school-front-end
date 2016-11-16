@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h2>A basic form</h2>
+  <ul>
+    <li>the action attribute of a form specifies the path that form data will be sent to on the server</li>
+    <li>the formaction attribute is used on a button or input of type="submit"</li>
+    <li>the formaction attribute overrides the default path specified in the action attribute</li>
+    <li>the method attribute is specified as get or post</li>
+    <li>get presumes that nothing will be changed on the server. only that the server will receive and act on form data</li>
+    <li>post sends a post request to the server. use post when you want to change data on the server</li>
+  </ul>
+  <form action="#" method="post">
+    <fieldset>
+      <label for="email">Email Address</label>
+      <input id="email" type="email" name="email" />
+      <div class="actions">
+        <input type="submit" value="Login">
+        <button type="submit" formaction="#">Delete Account</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <h2>Other form attributes</h2>
+  <ul>
+    <li>id: use when form controls reside outside the form. Refer back to the form by referring to the id</li>
+    <li>novalidate: is a boolean attribute and so does not need to be set to a value</li>
+    <li>autocomplete: set to ="on" or ="off". "on" by default. "off" means that browser or device will not autocomplete</li>
+  </ul>
+
+  <p>this form does not validate the email address:</p>
+  <form id="search" action="#" method="post" novalidate>
+    <fieldset>
+      <input type="name" name="name" placeholder="name"/>
+      <input type="email" name="email" placeholder="email"/>
+    </fieldset>
+    <input type="submit" value="Submit">
+  </form>
+
+  <p>this form does validate the email address:</p>
+  <form action="#" method="post">
+    <fieldset>
+      <input type="email" name="email" placeholder="email" />
+    </fieldset>
+    <input type="submit" value="submit">
+  </form>
+
+  <h2>Input types</h2>
+  <ul>
+    <li>the default value for input type is "text"</li>
+  </ul>
+  <p>here are several forms with every input type:</p>
+
+  <form action="#" method="get">
+    <fieldset>
+      <p>button. it has no default behavior</p>
+      <button type="submit" value="Submit">Click Me!</button>
+      <p>checkbox. must have value attribute. common attributes include checked and indeterminate.</p>
+      <label for="normalcheckbox">Normal Checkbox</label>
+      <input type="checkbox" name="normalcheckbox" value="normal checkbox" />
+      <p>here you can click on the label to select/deselect:</p>
+      <label><input type="checkbox" name="super" value="super" />Super!</label>
+      <p>this one is default checked</p>
+      <label><input type="checkbox" name="bad" value="bad" checked/>Bad!</label>
+      <p>this one is indeterminate but it also has to be checked as a default</p>
+      <p>however it looks like indeterminate only settable via javascript
+      <a href="https://css-tricks.com/indeterminate-checkboxes/" target="_blank">Indeteriminate Checkboxes</a></p>
+      <label><input type="checkbox" name="dunno" value="dunno" indeterminate checked />Dunno?</label>
+      <p>There is even a color type that provides a color picker and passes the hex value to the server on submit.</p>
+      <label for="color">Select a Color:</label>
+      <input type="color" value="#ff0000" name="color" />
+      <input type="submit">
+    </fieldset>
+  </form>
+
+  <form>
+    <h1>Here are various date and time oriented fields</h1>
+    <fieldset>
+      <label for="date">Date</label>
+      <input type="date" name="date" id="date" />
+
+      <p>The date time input type.  seems to just be text entry.</p>
+      <p><a href="http://stackoverflow.com/questions/21263515/why-is-html5-input-type-datetime-removed-from-browsers-already-supporting-it">stack overflow post</a></p>
+      <label for="datetime">Date/Time</label>
+      <input type="datetime" name="datetime" id="datetime" />
+
+      <p>However the datetime-local input type provides some controls for entering a valid datetime</p>
+      <label for="datetime-local">Date/Time Local</label>
+      <input type="datetime-local" name="dt-local" id="datetime-local" />
+
+      <p>the time field is for entering a time</p>
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" />
+
+      <p>week is also an input type. it is supported in chrome 54 and gives you a nifty week selector.</p>
+      <p>week is submitted to server as follows: 2016-W47</p>
+      <label for="theWeek">Enter the week:</label>
+      <input type="week" id="theWeek" name="week" />
+
+      <p>month input types work something like the week input type</p>
+      <p>month is submitted to server as follows: 2016-11</p>
+      <label for="month">Enter the Month</label>
+      <input type="month" id="month" name="month" />
+
+      <input type="submit" />
+    </fieldset>
+  </form>
+
+  <form action="#" method="get">
+    <h1>Radio Buttons and Check Boxes</h1>
+    <p>radio buttons are a selection type that requires a value attribute</p>
+    <p>you can only select one value for a set of radio inputs with the same name</p>
+    <p>if you don't specify a value for a checkbox then the form sends on for that named input</p>
+    <fieldset>
+      <label for="colors">Red</label>
+      <input type="radio" value="red" name="colors" id="colors">
+      <label for="colors">Blue</label>
+      <input type="radio" value="blue" name="colors" id="colors">
+      <label for="colors">Green</label>
+      <input type="radio" value="green" name="colors" id="colors">
+      <input type="submit">
+      <p></p>
+      <label for="hello">Hello</label>
+      <input type="checkbox" name="hello" value="h" />
+      <label for="goodbye">Goodbye</label>
+      <input type="checkbox" name="goodbye" value="g" />
+    </fieldset>
+  </form>
+
+  <form action="#" method="get">
+    <h1>Various text inputs</h1>
+    <fieldset>
+      <p>The telephone input</p>
+      <label for="telephone">Telephone:</label>
+      <input type="telephone" />
+      <input type="submit" />
+    </fieldset>
+  </form>
+</body>
+</html>
