@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Various Forms Exercises</title>
+  <style>
+    .news label {
+      display: block;
+    } 
+  </style>
+</head>
+<body>
+  <form action="#" method="get">
+    <h1>Here is a form for sending contact info</h1>
+    <fieldset>
+      <dl>
+        <dt>
+          <label for="first_name">First Name</label>
+        </dt>
+        <dd>
+          <input type="text" name="first_name" id="first_name">
+        </dd>
+
+        <dt>
+          <label for="last_name">Last Name</label>
+        </dt>
+        <dd>
+          <input type="text" name="last_name" id="last_name">
+        </dd>
+
+        <dt>
+          <label for="email_address">Email Address</label>
+        </dt>
+        <dd>
+          <input type="email" name="email_address" id="email_address" autocomplete="off">
+        </dd>
+
+        <dt>
+          <label for="telephone">Telephone Number</label>
+        </dt>
+        <dd>
+          <input type="tel" name="telephone" id="telephone">
+        </dd>
+
+        <label for="phone_type">Phone Type</label>
+        <select id="phone_type" name="phone_type">
+          <option value="home">Home</option>
+          <option value="businesss">Business</option>
+          <option value="mobile" selected>Mobile</option>
+        </select>
+      </dl>
+
+      <input type="submit" value="send">
+    </fieldset>
+  </form>
+
+  <form class="news" action="#" method="get">
+    <h1>News article filtering</h1>
+    <fieldset>
+      <h3>Categories</h3>
+      <label>
+        <input type="radio" name="category" value="core">
+        Core
+      </label>
+      <label>
+        <input type="radio" name="category" value="plugins and libraries">
+        Plugins and Libraries
+      </label>
+      <label>
+        <input type="radio" name="category" value="conventions">
+        Conventions
+      </label>
+      <label>
+        <input type="radio" name="category" value="reviews">
+        Reviews
+      </label>
+      <label>
+        <input type="radio" name="category" value="opinion">
+        Opinion
+      </label>
+      <label>
+        <input type="radio" name="category" value="people">
+        People
+      </label>
+
+      <h3>Tags:</h3>  
+      <label>
+        <input type="checkbox" name="tag" value="html">
+        HTML
+      </label>
+      <label>
+        <input type="checkbox" value="css">
+        CSS
+      </label>
+      <label>
+        <input type="checkbox" value="javascript">
+        Javascript
+      </label>
+      <label>
+        <input type="checkbox" value="ruby">
+        Ruby
+      </label>
+      <label>
+        <input type="checkbox" value="rails">
+        Rails
+      </label>
+      <label>
+        <input type="checkbox" value="python">
+        Python
+      </label>
+      <label>
+        <input type="checkbox" value="django">
+        Django
+      </label>
+      <input type="submit" value="Filter Search">
+    </fieldset>
+  </form>
+</body>
+</html
