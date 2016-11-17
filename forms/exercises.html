@@ -115,5 +115,34 @@
       <input type="submit" value="Filter Search">
     </fieldset>
   </form>
+
+  <form class="news" action="#" method="get">
+    <h1>News article filtering with select elements</h1>
+    <fieldset>
+      <label for="categories">Categories</label>
+      <select name="categories" multiple>
+        <option value="Core">Core</option>
+        <option value="Plugins and Libraries">Plugins and Libraries</option>
+        <option value="Conventions" selected>Conventions</option>
+        <option value="Reviews">Reviews</option>
+        <option value="Opinion" selected>Opinion</option>
+        <option value="People">People</option>
+      </select>
+
+      <label for="tags">Tags</label>
+      <select name="tags" multiple>
+        <option value="HTML" selected>HTML</option>
+        <option value="CSS" selected>CSS</option>
+        <option value="Javascript">Javascript</option>
+        <option value="Ruby">Ruby</option>
+        <option value="Rails">Rails</option>
+        <option value="Python">Python</option>
+        <option value="Django">Django</option>
+      </select>
+
+      <input type="submit" value="Filter Search">
+      <input type="reset">
+    </fieldset>
+  </form>
 </body>
 </html
