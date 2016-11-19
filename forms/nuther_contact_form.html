@@ -13,15 +13,17 @@
       <h2>Personal Info</h2>
       <dl>
         <dt><label for="first_name">Your Name</label></dt>
-        <dd><input type="text" id="first_name" name="first_name"></dd>
-        <dd><input type="text" id="last_name" name="last_name"></dd>
+        <dd class="clearfix">
+        <input type="text" id="first_name" name="first_name"><!--
+        --><input type="text" id="last_name" name="last_name">
+        </dd>
         <dt><label for="email">Email</label></dt>
         <dd><input type="text" id="email" name="email"></dd>
       </dl>
     </fieldset>
 
     <fieldset>
-      <h2>Social Medial Accounts</h2>
+      <h2>Social Media Accounts</h2>
       <dl>
         <dt><label for="facebook">Facebook</label></dt>
         <dd><input type="text" id="facebook" name="facebook"></dd>
@@ -50,11 +52,14 @@
     </fieldset>
 
     <fieldset>
-      <input type="checkbox" name="agree" id="agree">
-      <label for="agree">I agree to treat other users with respect, and will not say anything at all if I have nothing nice to say.</label>
+      
+      <label class="checkbox" for="agree">
+        <input type="checkbox" name="agree" id="agree">
+        I agree to treat other users with respect, and will not say anything at all if I have nothing nice to say.
+      </label>
+      <input class="button" type="submit">
     </fieldset>
 
-    <input class="button" type="submit">
   </form>
 </body>
 </html>
