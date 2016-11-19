@@ -8,45 +8,46 @@
 <body>
   <form action="" method="get">
 
-    <dl>
-      <dt>
+    <fieldset>
+      <dl>
+        <dt>
         <label for="first_name">First Name</label>
-      </dt>
-      <dd>
+        </dt>
+        <dd>
         <input type="text" id="first_name" name="first_name">
-      </dd>
-    </dl>
+        </dd>
+      </dl>
 
-    <dl>
-      <dt>
+      <dl>
+        <dt>
         <label for="last_name">Last Name</label>
-      </dt>
-      <dd>
+        </dt>
+        <dd>
         <input type="text" id="last_name" name="last_name">
-      </dd>
-    </dl>
+        </dd>
+      </dl>
 
-    <dl>
-      <dt>
-        <label for="email_address">Email Address</label>
-      </dt>
-      <dd>
-        <input type="email">
-      </dd>
-    </dl>
+      <dl>
+        <dt>
+        <label for="email">Email Address</label>
+        </dt>
+        <dd>
+        <input type="email" id="email" name="email" inputmode="email">
+        </dd>
+      </dl>
 
-    <dl>
-      <dt>
+      <dl>
+        <dt>
         <label for="city">City</label>
-      </dt>
-      <dd>
-        <input type="text">
-      </dd>
-      <dt>
+        </dt>
+        <dd>
+        <input type="text" id="city" name="city">
+        </dd>
+        <dt>
         <label for="state">State</label>
-      </dt>
-      <dd>
-        <select name="state">
+        </dt>
+        <dd>
+        <select name="state" id="state">
           <option>AK</option>
           <option>AL</option>
           <option>AR</option>
@@ -99,31 +100,38 @@
           <option>WV</option>
           <option>WY</option>
         </select>
-      </dd>
-      <dt>
+        </dd>
+        <dt>
         <label for="zip">Zipcode</label>
-      </dt>
-      <dd>
-        <input type="text">
-      </dd>
-    </dl>
+        </dt>
+        <dd>
+        <input type="text" id="zip" name="zip" maxlength="5" inputmode="numeric">
+        </dd>
+      </dl>
+    </fieldset>
 
-    <p>What is your favorite color?</p>
-    <ul>
-      <li><label><input type="radio" name="color" value="red" id="color">Red</label></li>
-      <li><label><input type="radio" name="color" value="red" id="color">Blue</label></li>
-      <li><label><input type="radio" name="color" value="red" id="color">Green</label></li>
-    </ul>
+    <fieldset>
+      <p>What is your favorite color?</p>
+      <ul>
+        <li><label><input type="radio" name="color" value="red" id="color" checked>Red</label></li>
+        <li><label><input type="radio" name="color" value="red" id="color">Blue</label></li>
+        <li><label><input type="radio" name="color" value="red" id="color">Green</label></li>
+      </ul>
 
-    <p>What would you like to study?</p>
-    <ul>
-      <li><label><input type="checkbox" name="html">HTML</label></li>
-      <li><label><input type="checkbox" name="css">CSS</label></li>
-      <li><label><input type="checkbox" name="ruby">Ruby</label></li>
-    </ul>
+      <p>What would you like to study?</p>
+      <ul>
+        <li><label><input type="checkbox" name="html">HTML</label></li>
+        <li><label><input type="checkbox" name="css">CSS</label></li>
+        <li><label><input type="checkbox" name="ruby">Ruby</label></li>
+      </ul>
 
-    <input type="submit">
-    <input type="reset">
+      <label for="comments">Comments</label>
+      <textarea id="comments" name="comments" ></textarea>
+    </fieldset>
+
+    <input type="hidden" value="2016-11-28">
+    <input class="button" type="submit">
+    <input class="button" type="reset">
 
   </form>
 </body>
