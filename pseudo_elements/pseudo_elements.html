@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    ul li:before {
+      content: "*";
+    }
+
+    .module {
+      width: 200px;
+      height: 200px;
+      background: #f06d06;
+      position: relative;
+      border: 5px solid blue;  
+      margin: 20px;
+    }
+
+    .module:after {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+      background: red;
+      z-index: -1;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Groceries</h1>
+  <ul>
+    <li>Bread</li>
+    <li>Eggs</li>
+    <li>Milk</li>
+  </ul>
+
+  <div class="module">
+  </div>
+
+</body>
+</html>
