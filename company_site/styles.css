@@ -20,7 +20,7 @@ header {
 nav a {
   color: #cecece;
   text-decoration: none;
-n}
+}
 
 nav a.active {
   color: #6db9ff;
@@ -38,13 +38,16 @@ header img {
 }
 
 img.project {
+  display: block;
   width: 100%;
   margin-bottom: 60px;
 }
 
 main {
   box-sizing: border-box;
-  padding: 125px 200px 140px 125px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 100px 140px 100px;
 }
 
 main h1 {
@@ -125,4 +128,54 @@ ul.team li {
 ul.team h2 {
   margin-top: 16px;
   font-weight: normal;
+}
+
+/* responsive design */
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  main h1 { color: blue; }
+  main p  { text-align: justify }
+}
+
+@media screen and (max-width: 830px) and (min-width: 681px) {
+  .team { 
+    margin: 0 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 0px;
+    font-size: 16px;
+  }
+
+  main {
+    padding: 25px;
+  }
+
+  main p {
+    text-align: justify;
+  }
+
+  header {
+    height: 125px;
+    margin: 0;
+    padding: 10px;
+  } 
+
+  header img {
+    height: 70%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    float: left;
+  }
+
+  header nav a {
+    font-size: 16px;
+  }
+
+  header nav li {
+    display: block;
+    text-align: right;
+  }
 }
