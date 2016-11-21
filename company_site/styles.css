@@ -17,16 +17,17 @@ header {
   padding-top: 135px;
 }
 
-header a {
+nav a {
   color: #cecece;
   text-decoration: none;
-}
+n}
 
-header a.active {
+nav a.active {
   color: #6db9ff;
+  font-weight: bold;
 }
 
-header li {
+nav li {
   display: inline-block;
   margin: 0 45px;
   font-size: 26px;
@@ -43,7 +44,7 @@ img.project {
 
 main {
   box-sizing: border-box;
-  padding: 125px 220px 140px 220px;
+  padding: 125px 200px 140px 125px;
 }
 
 main h1 {
@@ -68,6 +69,10 @@ main p {
   margin-bottom: 160px;
   line-height: 28px;
   color: #45494d;
+}
+
+main a {
+  text-decoration: none;
 }
 
 footer {
@@ -112,3 +117,12 @@ footer ul a.instagram:before {
   background-position: 0 -138px;
 }
 
+ul.team li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+ul.team h2 {
+  margin-top: 16px;
+  font-weight: normal;
+}
