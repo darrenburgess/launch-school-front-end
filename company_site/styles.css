@@ -1,0 +1,114 @@
+@import url("reset.css");
+
+header {
+  background: #2f2840 url("images/bg_body.gif")
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: Helvetical, Arial, sans-serif;
+  text-align: center;
+}
+
+header {
+  box-sizing: border-box;
+  height: 570px;
+  padding-top: 135px;
+}
+
+header a {
+  color: #cecece;
+  text-decoration: none;
+}
+
+header a.active {
+  color: #6db9ff;
+}
+
+header li {
+  display: inline-block;
+  margin: 0 45px;
+  font-size: 26px;
+}
+
+header img {
+  margin-bottom: 100px;
+}
+
+img.project {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+main {
+  box-sizing: border-box;
+  padding: 125px 220px 140px 220px;
+}
+
+main h1 {
+  font-size: 30px; 
+  font-weight: bold;
+  color: #45494d;
+  margin-bottom: 44px;
+}
+
+main h1:before, main h1:after {
+  content: "•"; 
+  margin: 0 28px;
+}
+
+main h2 {
+  color: #3e59b2;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+main p {
+  margin-bottom: 160px;
+  line-height: 28px;
+  color: #45494d;
+}
+
+footer {
+  height: 275px;
+  box-sizing: border-box;
+  background-color: #e7e7e7;
+  border: 1px solid black;
+  padding: 62px 275px 76px 275px;
+  color: #b2b2b2;
+}
+
+footer ul {
+  margin-top: 46px;
+}
+
+footer ul a:before {
+  display: inline-block;
+  content: "";
+  background: transparent url("images/icons_social-media.png") 0 0 no-repeat;
+  height: 46px;
+  width: 46px;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 5%;
+}
+
+footer ul a.twitter:before {
+  background-position: 0 0;
+}
+
+footer ul a.facebook:before {
+  background-position: 0 -46px;
+}
+
+footer ul a.email:before {
+  background-position: 0 -92px;
+}
+
+footer ul a.instagram:before {
+  background-position: 0 -138px;
+}
+
