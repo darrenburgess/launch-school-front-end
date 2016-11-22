@@ -1,0 +1,23 @@
+@import url("reset.css");
+
+main {
+  min-width: 600px;
+  max-width: 1400px;
+}
+
+#content,
+#sidebar {
+  padding: 20px 30px;
+}
+
+#content {
+  float: left;
+  width: 70%;
+  box-sizing: border-box;
+  background: lightblue;
+}
+
+#sidebar {
+  overflow: hidden;
+  background: lightgreen;
+}
