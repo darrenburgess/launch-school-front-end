@@ -5,7 +5,7 @@ body {
 }
 
 main {
-  height: 826px;
+  height: auto; /*826px;*/
   width: 420px;
   border: 2px solid black;
   box-sizing: border-box;
@@ -13,8 +13,8 @@ main {
 }  
 
 h1 {
-  font-size: 50px;
-  font-family: "Franklin Gothic Heavy", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif; 
+  font-size: 49px;
+  font-family: "Arial Black", sans-serif; 
   font-weight: 900;
   margin: -2px;
 }
@@ -40,6 +40,7 @@ dl {
 }
 
 dt {
+  font-family: "Arial Black", sans-serif; 
   font-size: 15px;
   font-weight: 900;
   padding-bottom: 6px;
@@ -53,7 +54,7 @@ dd {
 }
 
 dd span {
-  font-weight: 900;
+  font-family: "Arial Black", sans-serif; 
 }
 
 dd:first-child {
@@ -70,6 +71,7 @@ table {
 }
 
 table strong {
+  font-family: "Arial Black", sans-serif; 
   font-size: 16px;
   font-weight: 900;
 }
@@ -85,7 +87,7 @@ td {
 }
 
 td span {
-  font-weight: 900;
+  font-family: "Arial Black", sans-serif; 
 }
 
 tr td:last-child {
@@ -103,5 +105,28 @@ table + p {
   line-height: 19px;
   padding-left: 10px;
   text-indent: -10px;
+}
+
+table:last-child {
+  font-size: 15px;
+  margin-top: 6px;
+  text-align: left;
+}
+
+table:last-child thead {
+  border-bottom: 1px solid black;
+}
+
+table:last-child tbody:before {
+  content: "-";
+  display: block;
+  line-height: 0px;
+  color: transparent;
+}
+
+table:last-child td {
+  height: 18px;
+  border-bottom: 0;
+  text-align: left;
 }
 
