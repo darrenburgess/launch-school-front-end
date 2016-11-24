@@ -130,3 +130,7 @@ table:last-child td {
   text-align: left;
 }
 
+table:last-child tbody tr:nth-child(2) td:first-child,
+table:last-child tbody tr:nth-child(6) td:first-child {
+  text-indent: 28px;
+}
