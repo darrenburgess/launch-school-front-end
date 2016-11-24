@@ -1,0 +1,107 @@
+@import url("reset.css");
+
+body {
+  font-family: Helvetica, Arial, sans-serif
+}
+
+main {
+  height: 826px;
+  width: 420px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 3px 5px;
+}  
+
+h1 {
+  font-size: 50px;
+  font-family: "Franklin Gothic Heavy", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif; 
+  font-weight: 900;
+  margin: -2px;
+}
+
+p {
+  font-size: 22px;
+  line-height: 22px;
+}
+
+header {
+  padding-bottom: 5px;
+  border-bottom: 18px solid black;
+  margin-bottom: 8px;
+}
+
+em {
+  font-style: italic;
+}
+
+dl {
+  border-bottom: 8px solid black;
+  padding-bottom: 3px;
+}
+
+dt {
+  font-size: 15px;
+  font-weight: 900;
+  padding-bottom: 6px;
+  border-bottom: 1px solid black;
+  margin-bottom: 6px;
+}
+
+dd {
+  display: inline-block;
+  font-size: 20px;
+}
+
+dd span {
+  font-weight: 900;
+}
+
+dd:first-child {
+  float: left;
+}
+
+dd:last-child {
+  float: right;
+}
+
+table {
+  width: 100%;
+  font-size: 22px;
+}
+
+table strong {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+table:first-of-type {
+  border-bottom: 20px solid black;
+}
+
+td {
+  height: 29px;
+  border-bottom: 1px solid black;
+  vertical-align: middle;
+}
+
+td span {
+  font-weight: 900;
+}
+
+tr td:last-child {
+  text-align: right;
+}
+
+td.indent {
+  width: 28px;
+  border-bottom: white;
+}
+
+table + p {
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 19px;
+  padding-left: 10px;
+  text-indent: -10px;
+}
+
