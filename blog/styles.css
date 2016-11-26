@@ -1,0 +1,36 @@
+@import url("reset.css");
+
+body {
+  font: normal 20px Helvetica, Arial, sans-serif;
+}
+
+header {
+  padding-top: 145px;
+  padding-bottom: 56px;
+  box-sizing: border-box;
+  height: 540px;
+  background: #3d3d3d; 
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.6em; 
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 52px;
+}
+
+header ul {
+  margin-top: 140px;
+}
+
+header li {
+  display: inline-block;
+  margin: 0 11px;
+  text-transform: uppercase;
+}
+
+header li.active {
+  color: #50c3af;
+}
