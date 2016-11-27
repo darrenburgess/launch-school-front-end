@@ -34,7 +34,7 @@ h3 {
   margin-bottom: 35px;
 }
 
-header {
+body > header {
   padding-top: 145px;
   padding-bottom: 56px;
   box-sizing: border-box;
@@ -84,7 +84,7 @@ main {
   color: #50c3af;
 }
 
-#content article span.author {
+#content article a.author {
   color: #50c3af;
 }
 
@@ -94,6 +94,20 @@ main {
 
 #content article p.article-body {
   margin-bottom: 100px;
+}
+
+.comments img {
+  display: inline;
+}
+
+.comments h3 {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: none;
+}
+
+.comments p {
+  margin-bottom: 20px;
 }
 
 .button {

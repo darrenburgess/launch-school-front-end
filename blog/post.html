@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="styles.css">
-  <title>Blog | Home</title>
+  <title>Blog | Post</title>
 </head>
 <body>
   <header>
@@ -23,22 +23,30 @@
   <main>
     <div id="content">
       <article>
-        <h2><a href="post.html">Post Title</a></h2>
+        <h2>Post Title</h2>
         <p class="byline">Written by <a class="author">Darren Burgess</a> on November 11, 2016</p>
 
         <p class="article-body">Ipsum dicta quia praesentium adipisci laborum ad. Rerum quae illum nihil in nesciunt? Aperiam numquam at cupiditate optio maiores perferendis nesciunt minus vero. Reprehenderit voluptas nam ullam accusantium at nobis? Elit nostrum ratione magni accusamus corporis blanditiis. Dolorem velit similique pariatur eligendi laboriosam corrupti, necessitatibus! Laborum iure repellat in ducimus eius corrupti debitis nulla odit doloribus a quia culpa ad.</p>
       </article>
 
-      <article>
-        <h2>Article Title 2</h2>
-        <p class="byline">Written by <span class="author">Darren Burgess</span> on November 11, 2016</p>
-        <p class="article-body">Ipsum dicta quia praesentium adipisci laborum ad. Rerum quae illum nihil in nesciunt? Aperiam numquam at cupiditate optio maiores perferendis nesciunt minus vero. Reprehenderit voluptas nam ullam accusantium at nobis? Dolor a autem porro quibusdam impedit obcaecati? Quas odit repudiandae nesciunt officia perspiciatis tenetur nihil! Doloremque dolor voluptatum quaerat possimus minima ratione suscipit inventore. Ducimus deleniti suscipit eligendi tempore reprehenderit.</p>
-      </article>
+      <section class="comments">
+        <h2>Comments</h2>
+        <article>
+          <header>
+            <img src="images/kevin.png" alt="kevin">
+            <h3><a class="author" href="">Kevin</a> on <time datetime="2014-02-15">Feb. 15, 2014</time></h3>
+          </header>
+          <p>Amet inventore earum adipisci magni rerum illo. Tempora inventore repellat voluptatem explicabo quidem temporibus! Qui quae ratione.</p>
+        </article>
+        <article>
+          <header>
+            <img src="images/chris.png" alt="chris">
+            <h3><a class="author" href="">Chris</a> on <time datetime="2014-02-15">Feb. 15, 2014</time></h3>
+          </header>
+          <p>Amet inventore earum adipisci magni rerum illo. Tempora inventore repellat voluptatem explicabo quidem temporibus! Qui quae ratione.</p>
+        </article>
+      </section>
 
-      <div id="pagination">
-        <a class="button disabled" href="#">Previous</a>
-        <a class="button next" href="#">Next</a>
-      </div>
     </div>
 
     <div id="sidebar">
