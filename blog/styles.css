@@ -2,6 +2,36 @@
 
 body {
   font: normal 20px Helvetica, Arial, sans-serif;
+  color: #45494d;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  text-align: justify;
+  line-height: 150%;
+}
+
+h1 {
+  font-size: 2.6em; 
+  font-weight: bold;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  margin-bottom: 52px;
+}
+
+h2 {
+  font-size: 1.625em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 35px;
 }
 
 header {
@@ -14,23 +44,137 @@ header {
   text-align: center;
 }
 
-header h1 {
-  font-size: 2.6em; 
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 52px;
-}
-
-header ul {
+nav ul {
   margin-top: 140px;
 }
 
-header li {
-  display: inline-block;
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: white;
   margin: 0 11px;
   text-transform: uppercase;
 }
 
-header li.active {
+nav a.active {
   color: #50c3af;
+}
+
+nav a:hover {
+  color: #f5dc39;
+}
+
+main {
+  overflow: hidden;
+  max-width: 1000px;
+  padding: 80px 0;
+  margin: 0 auto;
+}
+
+#content {
+  float: left;
+  width: 65%;
+  padding: 0 11.5% 0 0;
+  overflow: hidden;
+}
+
+#content article h1:hover {
+  color: #50c3af;
+}
+
+#content article span.author {
+  color: #50c3af;
+}
+
+#content article p.byline {
+  margin-bottom: 42px;
+}
+
+#content article p.article-body {
+  margin-bottom: 100px;
+}
+
+.button {
+  display: inline-block;
+  font-weight: bold;
+  padding: 5px 25px;
+  margin-right: 20px;
+  color: white;
+  background: #50c3af;
+  border-radius: 20px;
+  border: 0;
+}
+
+#pagination a {
+  font-size: 12px;
+}
+
+#pagination a.disabled {
+  background: #d2d5da;
+  cursor: default;
+}
+
+#sidebar {
+  overflow: hidden;
+  background: #f6f7f8;
+  font-size: 14px;
+  padding: 40px;
+}
+
+#sidebar ul {
+  margin-bottom: 120px;
+}
+
+#sidebar li {
+  margin-bottom: 14px;
+}
+
+#sidebar li:before {
+  content: url("images/blt_ul.png");
+  margin-right: 12px;
+}
+
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px 0 30px 0;
+  border-top: 1px solid #d0d0d0;
+  font-size: 12px;
+  color: #7e8287;
+}
+
+@media (max-width: 768px) {
+
+  header {
+    height: 300px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  img {
+    width: 50%;
+  }
+
+  nav ul {
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-size: 1.2em
+  }
+  
+}
+
+@media (max-width: 600px) {
+  
+}
+
+@media (max-width: 480px) {
+  
 }
