@@ -4,24 +4,37 @@
   <meta charset="UTF-8">
   <title>Sample Column Layout</title>
   <style>
-    body {
+    html, body, ul, li {
       margin: 0;
       padding: 0;
     }
+
+    .row {
+      clear: both;
+      margin-left: -2%;
+    }
+
+    .row:after {
+      display: block;
+      clear: both;
+      line-height: 0;
+      content: "";
+    }
+
     .fourth {
-      display: inline-block;
-      width: 25%;
-      vertical-align: top;
+      float: left;
+      width: 23%;
+      margin-left: 2%;
     }
 
   </style>
 </head>
 <body>
   <ul>
-    <li class="fourth">testing 1</li><!--
-    --><li class="fourth">testing 2</li><!--
-    --><li class="fourth">testing 3</li><!--
-    --><li class="fourth">testing 4</li><!--
+    <li class="fourth">testing 1</li>
+    <li class="fourth">testing 2</li>
+    <li class="fourth">testing 3</li>
+    <li class="fourth">testing 4</li>
   </ul>
 </body>
 </html>
