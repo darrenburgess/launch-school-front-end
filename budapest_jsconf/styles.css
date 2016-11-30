@@ -1,1 +1,43 @@
 @import url("reset.css");
+
+body {
+  font: normal 16px "Source Sans Pro", sans-serif;
+}
+
+#content {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  background: url("images/gr_header.png") no-repeat;
+  background-size: 100% 100%;
+  height: 463px;
+  box-sizing: border-box;
+  padding: 16px 0 0 5px;
+}
+
+header ul.site-nav:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: url("images/gr_js_logo_white.jpg");
+  padding-right: 10px;
+}
+
+nav {
+  text-align: left;
+  padding-left: 8.5%
+}
+
+nav a {
+  color: #e1ffff;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0 16px;
+}
