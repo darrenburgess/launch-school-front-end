@@ -4,6 +4,10 @@ body {
   font: normal 16px "Source Sans Pro", sans-serif;
 }
 
+p {
+  color: black;
+}
+
 #content {
   width: 100%;
   margin: 0 auto;
@@ -13,6 +17,7 @@ body {
 header {
   background: url("images/gr_header.png") no-repeat;
   background-size: 100% 100%;
+  background-color: #3076b2;
   height: 463px;
   box-sizing: border-box;
   padding: 16px 0 0 5px;
@@ -25,9 +30,26 @@ header ul.site-nav:before {
   padding-right: 10px;
 }
 
+header h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+header h1 span.first-word {
+  color: #f6dd49;
+}
+
+header h1:after {
+  display: inline-block;
+  vertical-align: middle;
+  content: url("images/gr_js_logo_yellow.jpg");
+}
+
 nav {
   text-align: left;
-  padding-left: 8.5%
+  padding-left: 5%
 }
 
 nav a {
@@ -35,9 +57,35 @@ nav a {
   text-decoration: none;
   font-weight: 100;
   font-size: 15px;
+  letter-spacing: .5px;
 }
 
 nav li {
   display: inline-block;
   padding: 0 16px;
+}
+
+nav ul.social {
+  position: absolute;
+  top: 26px;
+  right: 10px;
+}
+
+nav ul.social a {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: url("images/gr_social.png");
+  background-size: auto 28px;
+  background-repeat: no-repeat;
+  text-indent: -9999;
+}
+
+nav ul.social a.twitter {
+  background-position: 0px 0px;
+  margin: 0 22px 0 0;
+}
+
+nav ul.social a.facebook {
+  background-position: -30px 0px;
 }
