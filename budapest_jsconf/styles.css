@@ -216,12 +216,14 @@ section article.speaker {
   margin: 0 30px 60px 0;
 }
 
-section article.speaker img {
+section article.speaker img,
+section article.workshop img {
   height: 120px;
   width: 120px;
 }
 
-section article.speaker .img {
+section article.speaker .img,
+section article.workshop .img {
   position: relative;
   height: 120px;
   width: 120px;
@@ -229,14 +231,16 @@ section article.speaker .img {
   padding: 0 10px 0 0;
 }
 
-section article.speaker .img:before {
+section article.speaker .img:before,
+section article.workshop .img:before {
   border-width: 0 12px 12px 0;
   border-color: transparent #fff transparent transparent;
   top: 0;
   right: 10px;
 }
 
-section article.speaker .img:after {
+section article.speaker .img:after,
+section article.workshop .img:after {
   border-width: 12px 0 0 12px;
   border-color: transparent transparent transparent #fff;
   bottom: 0;
@@ -244,7 +248,9 @@ section article.speaker .img:after {
 }
 
 section article.speaker .img:before,
-section article.speaker .img:after {
+section article.speaker .img:after,
+section article.workshop .img:before,
+section article.workshop .img:after {
   position: absolute;
   content: "";
   border-style: solid;
