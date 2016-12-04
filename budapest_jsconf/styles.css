@@ -8,13 +8,21 @@ p {
   color: black;
 }
 
+a {
+  text-decoration: none;
+}
+
+div {
+  display: block;
+}
+
 #content {
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
-header {
+header.site-header {
   background: url("images/gr_header.png") no-repeat;
   background-size: 100% 100%;
   background-color: #3076b2;
@@ -23,28 +31,37 @@ header {
   padding: 16px 0 0 5px;
 }
 
-header ul.site-nav:before {
+header.site-header ul.site-nav:before {
   display: inline-block;
   vertical-align: middle;
   content: url("images/gr_js_logo_white.jpg");
   padding-right: 10px;
 }
 
-header h1 {
-  font-size: 2em;
+header.site-header h1 {
+  font-size: 2.1em;
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 2px;
   color: white;
+  margin: 122px 0 0 0;
 }
 
-header h1 span.first-word {
+header.site-header h1 span.first-word {
   color: #f6dd49;
 }
 
-header h1:after {
+header.site-header h1:after {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: -100%;
   content: url("images/gr_js_logo_yellow.jpg");
+}
+
+header.site-header h1 span.sign {
+  font-weight: 100;
+  font-size: 1.7em; 
+  padding: 0 17px;
+  vertical-align: -11%;
 }
 
 nav {
@@ -88,4 +105,165 @@ nav ul.social a.twitter {
 
 nav ul.social a.facebook {
   background-position: -30px 0px;
+}
+
+main {
+  margin: 78px auto;
+}
+
+main p {
+  font-size: 1.9em;
+  color: #545454;
+  font-weight: 100;
+  line-height: 1.4em;
+}
+
+section header {
+  margin: 0 0 50px 0;
+}
+
+section header h1 {
+  display: inline-block;
+  position: relative;
+  margin: 120px 0 0 0;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #347fc0;
+  height: 50px;
+  vertical-align: middle;
+}
+
+section header h1 span {
+  display: block;
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  top: 50%;
+  margin-top: -42px;
+}
+
+section header h1 span.left {
+  left: -84px; 
+}
+
+section header h1 span.right {
+  right: -84px;
+}
+
+section header h1 span:before,
+section header h1 span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+section header h1 span.left:before {
+  top: 0;
+  left: 0;
+  border-width: 42px 0 42px 42px;
+  border-color: transparent transparent transparent #007bff;
+  opacity: .2;
+}
+
+section header h1 span.left:after {
+  border-width: 0 42px 42px 42px;
+  border-color: transparent transparent #007bff transparent;
+  opacity: .05;
+  bottom: 0;
+  left: 0;
+}
+
+section header h1 span.right:before {
+  top: 0;
+  left: 0;
+  border-width: 42px 42px 0 42px;
+  border-color: #3580c2 transparent transparent transparent;
+  opacity: .05;
+}
+
+section header h1 span.right:after {
+  border-width: 42px 42px 42px 0;
+  border-color: transparent #3580c2 transparent transparent;
+  opacity: .10;
+  bottom: 0;
+  right: 0;
+}
+
+main p.opener {
+  margin: 0 auto;
+  width: 580px; 
+  text-align: center;
+}
+
+main p span.bolded {
+  color: #1f1f1d;
+  font-weight: 600;
+}
+
+section.speakers {
+  max-width: 1200px;
+}
+
+section article.speaker {
+  width: 420px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  margin: 0 30px 60px 0;
+}
+
+section article.speaker img {
+  height: 120px;
+  width: 120px;
+}
+
+section article.speaker .img {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  float: left;
+  padding: 0 10px 0 0;
+}
+
+section article.speaker .img:before {
+  border-width: 0 12px 12px 0;
+  border-color: transparent #fff transparent transparent;
+  top: 0;
+  right: 10px;
+}
+
+section article.speaker .img:after {
+  border-width: 12px 0 0 12px;
+  border-color: transparent transparent transparent #fff;
+  bottom: 0;
+  left: 0;
+}
+
+section article.speaker .img:before,
+section article.speaker .img:after {
+  position: absolute;
+  content: "";
+  border-style: solid;
+}
+
+section article span.speaker-name {
+  color: #2b81ce;
+  font-size: 24px;
+  text-transform: uppercase;  
+}
+
+section article span.speaker-twitter a {
+  color: #a2a2a2;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+section article h3.speaker-title {
+  color: #e42c2a;
+  font-size: 18px;
+  font-weight: 600;
 }
