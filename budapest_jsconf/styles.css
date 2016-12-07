@@ -99,7 +99,7 @@ nav ul.social a {
   background: url("images/gr_social.png");
   background-size: auto 28px;
   background-repeat: no-repeat;
-  text-indent: -9999;
+  text-indent: -9999px;
 }
 
 nav ul.social a.twitter {
@@ -126,7 +126,7 @@ section header {
   margin: 0 0 50px 0;
 }
 
-section header h1 {
+section header h2 {
   display: inline-block;
   position: relative;
   margin: 120px 0 0 0;
@@ -138,7 +138,7 @@ section header h1 {
   vertical-align: middle;
 }
 
-section header h1 span {
+section header h2 span {
   display: block;
   position: absolute;
   width: 84px;
@@ -147,16 +147,16 @@ section header h1 span {
   margin-top: -42px;
 }
 
-section header h1 span.left {
+section header h2 span.left {
   left: -84px; 
 }
 
-section header h1 span.right {
+section header h2 span.right {
   right: -84px;
 }
 
-section header h1 span:before,
-section header h1 span:after {
+section header h2 span:before,
+section header h2 span:after {
   content: "";
   display: block;
   position: absolute;
@@ -165,7 +165,7 @@ section header h1 span:after {
   border-style: solid;
 }
 
-section header h1 span.left:before {
+section header h2 span.left:before {
   top: 0;
   left: 0;
   border-width: 42px 0 42px 42px;
@@ -173,7 +173,7 @@ section header h1 span.left:before {
   opacity: .2;
 }
 
-section header h1 span.left:after {
+section header h2 span.left:after {
   border-width: 0 42px 42px 42px;
   border-color: transparent transparent #007bff transparent;
   opacity: .05;
@@ -181,7 +181,7 @@ section header h1 span.left:after {
   left: 0;
 }
 
-section header h1 span.right:before {
+section header h2 span.right:before {
   top: 0;
   left: 0;
   border-width: 42px 42px 0 42px;
@@ -189,7 +189,7 @@ section header h1 span.right:before {
   opacity: .05;
 }
 
-section header h1 span.right:after {
+section header h2 span.right:after {
   border-width: 42px 42px 42px 0;
   border-color: transparent #3580c2 transparent transparent;
   opacity: .10;
@@ -273,7 +273,7 @@ section article span.speaker-twitter a {
   font-weight: 100;
 }
 
-section article h3.speaker-title {
+section article h4.speaker-title {
   color: #e42c2a;
   font-size: 18px;
   font-weight: 600;
@@ -375,7 +375,14 @@ footer {
 
 footer nav {
   text-align: center;
+  margin-top: 20px;
+  padding: 0 16px;
 }
+
+footer nav li {
+  padding: 0;
+}
+
 footer p,
 footer a {
   font-size: 12px;
