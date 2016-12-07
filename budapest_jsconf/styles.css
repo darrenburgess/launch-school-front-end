@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 div {
   display: block;
 }
@@ -204,7 +208,8 @@ main p span.bolded {
   font-weight: 600;
 }
 
-section.speakers {
+section.speakers,
+section.workshops {
   max-width: 1200px;
 }
 
@@ -272,4 +277,110 @@ section article h3.speaker-title {
   color: #e42c2a;
   font-size: 18px;
   font-weight: 600;
+}
+
+section article.workshop {
+  text-align: left;
+  padding: 0 142px 50px 142px;
+}
+
+section article.workshop div {
+  margin-top: 10px;
+}
+
+section article.workshop h2 {
+}
+
+section article.workshop h2 a {
+  font-size: 30px;
+  color: #2a7ec6;
+  font-weight: 600;
+}
+
+section article.workshop h3 {
+  font-size: 24px;
+}
+
+section article.workshop h3 a {
+  color: #2a7ec6;  
+}
+
+section article.workshop p {
+  font-size: 1.5em; 
+}
+
+section.sponsors div.sponsors-secondary {
+  margin: 0 250px;
+}
+
+section.sponsors div.sponsor-main img {
+  width: 50%;
+  margin: 0 0 40px 0;
+}
+
+section.sponsors div.sponsor-secondary {
+  display: inline-block;
+}
+
+section.sponsors div.sponsor-secondary img {
+  width: 200px;
+  padding: 0 15px 30px 15px;
+}
+
+section.sponsors h2,
+section.sponsors p,
+section.news h2,
+section.news h3,
+section.news p,
+section.venue p {
+  text-align: left;
+  line-height: 60px;
+  margin: 0 0 0 150px;
+}
+
+section.sponsors h2,
+section.news h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+section.sponsors p,
+section.news p,
+section.venue p {
+  font-size: 24px;
+}
+
+section.venue h2 {
+  font-size: 30px;
+  text-align: left;
+  margin: 0 0 0 150px;
+}
+
+section.venue div.inset p {
+  font-style: italic;
+  line-height: 40px;
+  border-left: 4px solid darkblue;
+  padding-left: 20px;
+}
+
+section.venue div p.citation a {
+  font-size: 16px;
+  display: block;
+  text-align: right;
+}
+
+footer {
+  margin-bottom: 30px;
+}
+
+footer nav {
+  text-align: center;
+}
+footer p,
+footer a {
+  font-size: 12px;
+}
+
+footer a {
+  color: grey;
 }
