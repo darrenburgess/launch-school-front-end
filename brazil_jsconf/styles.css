@@ -1,3 +1,118 @@
 @import url("reset.css");
 
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  position: relative;
+}
+
+body > div {
+  position: relative;
+}
+
+p {
+  font-size: 16px; 
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+}
+
+div {
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div.menu {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background: white;
+  border-top: 10px solid #F5F5F5;
+  border-bottom: 1px solid #EEE;
+}
+
+div.menu nav ul {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 960px;
+  text-align: center;
+}
+
+div.menu nav li {
+  display: inline-block; 
+  margin: 0 25px;
+}
+
+div.menu nav li a {
+  text-transform: uppercase;
+  line-height: 44px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+div.heading {
+  top: 55px;
+  margin-bottom: 55px;
+  height: 428px;
+  text-align: center;
+  background: url("images/front.jpg") center no-repeat;
+}
+
+div.heading .logo {
+  position: relative;
+  top: 150px;
+  width: 80px;
+  height: 80px;
+}
+
+div.heading h1,
+div.heading h2 {
+  color: white;
+  position: relative;
+  top: 150px;
+  margin-top: 16px;
+}
+
+div.heading h1 {
+  font-size: 72px;
+}
+
+div.heading h2 {
+  font-size: 31px;
+  text-transform: uppercase;
+}
+
+section {
+  text-align: center;
+  border-top: 1px solid black;
+}
+
+section h2 {
+  font-size: 48px;
+  font-weight: 100;
+  margin-top: 123px;
+  margin-bottom: 44px;
+}
+
+section a.buttonr{
+  margin: 12px auto;
+  background-color: #008001;
+  display: block;
+  height: 42px;
+  width: 232px;
+  color: white;
+}
+
+section a.button:hover {
+  text-decoration: none;
+}
+
+section a.button p {
+  line-height: 42px;
+  font-weight: 900;
+}
 
