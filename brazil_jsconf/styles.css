@@ -108,6 +108,7 @@ section a.buttonr{
   color: white;
 }
 
+
 section a.button:hover {
   text-decoration: none;
 }
@@ -117,3 +118,70 @@ section a.button p {
   font-weight: 900;
 }
 
+/************/
+/* speakers */
+/************/
+
+section.speakers {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+article.speaker {
+  box-sizing: border-box;
+  height: 375px;
+  width: 279px;
+  margin: 0 7px 10px 7px;
+  display: inline-block;
+  border: 1px solid lightgrey;
+  position: relative;
+}
+
+div.speaker-front,
+div.speaker-bio {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+div.speaker-front {
+  z-index: 1;
+  background-color: white;
+  transition: opacity .5s ease-in-out;
+}
+
+div.speaker-front:hover {
+  opacity: 0.0;
+}
+
+article.speaker img {
+  width: 100%;
+  height: auto;
+}
+
+article.speaker h2 {
+  color: #008000; 
+  font-size: 24px;
+  font-weight: bold;
+  margin: 42px 0 0 0;
+}
+
+article.speaker p {
+  color: #7a7a7a;
+  font-size: 16px;
+  margin: 10px 0 0 0;
+}
+
+div.speaker-bio {
+  background-color: black;
+  padding: 10px;
+  line-height: 14px;
+}
+
+div.speaker-bio p {
+  color: white;
+  font-size: 12px;
+}
