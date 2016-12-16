@@ -3,15 +3,23 @@
 body {
   font-family: "Open Sans", Arial, sans-serif;
   position: relative;
+  max-width: 1264px;
 }
 
 body > div {
   position: relative;
 }
 
+main {
+  padding: 5%;
+}
+
 p {
   font-size: 16px; 
   font-weight: 100;
+  text-align: left;
+  line-height: 24px;
+  margin-bottom: 15px;
 }
 
 a {
@@ -99,7 +107,7 @@ section h2 {
   margin-bottom: 44px;
 }
 
-section a.buttonr{
+a.button {
   margin: 12px auto;
   background-color: #008001;
   display: block;
@@ -108,14 +116,25 @@ section a.buttonr{
   color: white;
 }
 
-
-section a.button:hover {
+a.button:hover {
   text-decoration: none;
 }
 
-section a.button p {
+a.button p {
   line-height: 42px;
   font-weight: 900;
+  text-align: center;
+}
+
+footer a.button,
+section.call-for-papers a.button {
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+
+
+section.tickets p {
+  text-align: center;
 }
 
 /************/
@@ -173,6 +192,7 @@ article.speaker p {
   color: #7a7a7a;
   font-size: 16px;
   margin: 10px 0 0 0;
+  text-align: center;
 }
 
 div.speaker-bio {
@@ -184,4 +204,66 @@ div.speaker-bio {
 div.speaker-bio p {
   color: white;
   font-size: 12px;
+}
+
+/************/
+/* schedule */
+/************/
+
+section.schedule table {
+  margin: 0 auto;
+  text-align: left;
+  max-width: 920px;
+  font-size: 24px;
+}
+
+td {
+  border-top: 1px solid #efefef;
+  padding: 12px 0;
+  vertical-align: middle;
+}
+
+td.time {
+  width: 84px;
+}
+
+td.title {
+  width: 75%;
+}
+
+td.photo img {
+  width: 128px;
+  height: 106px;
+}
+
+td h3 {
+  margin-bottom: 10px; 
+}
+
+td h4 {
+  color: #008000; 
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/************/
+/* location */
+/************/
+
+section.location h3 {
+  text-align: left;
+  font-weight: bold;
+  margin: 0 0 10px 80px;
+}
+
+section.location img {
+  margin: 15px 0;
+}
+
+/************/
+/* footer   */
+/************/
+
+footer {
+  background: url(images/people.jpg);
 }
