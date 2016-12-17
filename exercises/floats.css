@@ -1,0 +1,86 @@
+@import url("reset.css");
+
+body, html {
+  height: 500px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+header,
+footer {
+  height: 100px;
+}
+
+header,
+main,
+aside,
+footer {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+div.container {
+  height: 100%;
+  overflow: hidden;
+}
+
+div.fixed,
+div.absolute {
+  height: 100px;
+  width: 100px;
+}
+
+div.fixed {
+  background: cadetblue;
+}
+
+div.absolute {
+  background: yellow;
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
+
+div:hover {
+  top: 100px;
+  bottom: 200px;
+}
+
+header {
+  background: skyblue;
+}
+
+main {
+  background: teal;
+  color: white;
+  width: 75%;
+  position: relative;
+}
+
+footer {
+  background: lightgreen;
+}
+
+main,
+aside {
+  float: left;
+  height: 100%;
+}
+
+aside {
+  background: purple;
+  color: white;
+  width: 25%;
+}
