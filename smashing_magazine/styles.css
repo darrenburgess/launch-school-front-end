@@ -1,0 +1,115 @@
+@import url("reset.css");
+
+body {
+  background: #f2f2f2;
+  padding: 0 15px;
+  font: 16px "Helvetica Neue", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+header img {
+  width: 100%;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+nav {
+  vertical-align: baseline;
+}
+
+nav ul {
+  display: inline;
+  float: left;
+  position: relative;
+}
+
+nav li {
+  display: list-item;
+  vertical-align: baseline;
+  height: 100px;
+  float: left;
+  text-align: webkit-match-parent;
+}
+
+nav a {
+  color: #a5a5a5;
+  display: block;
+  font-size: 20px;
+  padding: 2.5em 0 .5em;
+  height: 1.75em;
+}
+
+li.navbutton {
+  background: #f0f0f0;
+  box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.2);
+  height: 100px;
+  border-right: 1px solid lightgrey;
+  padding: 0 40px 0 40px;
+}
+
+#logo {
+  width: 200px;
+  background: white;
+}
+
+#logo a {
+  padding: 0 10px;
+}
+
+ul.socialnav {
+  float: left;
+}
+
+ul.socialnav li {
+  padding: 34px 10px 0 0;
+  height: 35px;
+}
+
+ul.socialnav a {
+  display: block;
+  box-sizing: border-box;
+  width: 35px;
+  height: 0;
+  position: relative;
+  background-image: url("images/channels.svg");
+  background-size: 353% 353%;
+  overflow: hidden;
+  opacity: .45;
+  whitespace: nowrap;
+}
+
+a.rss {
+  background-position: 76% 33%;
+}
+
+a.facebook {
+  background-position: 76% 64%;
+}
+
+a.twitter {
+  background-position: 76% 96%;
+}
+
+a.mail {
+  background-position: 76% -138%;
+}
+
+sidebar.advertising {
+  float: left;
+  background: lightgreen;
+  width: 200px;
+  height: 200px;
+}
