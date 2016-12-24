@@ -6,32 +6,102 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="sitenav clearfix">
-        <li id="logo"><a href="#"><img src="images/logo.svg" alt=""></a></li>
-        <li class="navbutton"><a href="#">Books</a></li>
-        <li class="navbutton"><a href="#">Ebooks</a></li>
-        <li class="navbutton"><a href="#">Tickets</a></li>
-        <li class="navbutton"><a href="#">Shop</a></li>
-        <li class="navbutton"><a href="#">Jobs</a></li>
-      </ul>
+    <header class="clearfix">
+      <nav>
+        <ul class="sitenav">
+          <li id="logo"><a href="#"><img src="images/logo.svg" alt=""></a></li>
+          <li class="navbutton"><a href="#">Books</a></li>
+          <li class="navbutton"><a href="#">eBooks</a></li>
+          <li class="navbutton"><a href="#">Tickets</a></li>
+          <li class="navbutton"><a href="#">Shop</a></li>
+          <li class="navbutton"><a href="#">Jobs</a></li>
+        </ul>
 
-      <ul class="socialnav clearfix">
-        <li><a class="rss" href="#"></a></li>
-        <li><a class="facebook"href="#"></a></li>
-        <li><a class="twitter"href="#"></a></li>
-        <li><a class="mail" href="#">&nbsp;</a></li>
-      </ul>
-    </nav>
-  </header>
-  <sidebar class="subnavigation">
-    <nav></nav>
-  </sidebar>
+        <ul class="socialnav">
+          <li><a class="rss" href="#"></a></li>
+          <li><a class="facebook"href="#"></a></li>
+          <li><a class="twitter"href="#"></a></li>
+          <li><a class="mail" href="#">&nbsp;</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <sidebar class="advertising"></sidebar>
+  <div id="container" class="clearfix">
+    <main class="column">
+      <p>main Dolor tenetur dolor voluptates deleniti pariatur. Quidem dolore enim aspernatur enim ipsum, quam aliquid officiis quae excepturi magni. Illum deserunt suscipit fuga praesentium nam nulla itaque! Voluptate amet rerum sed.
+Sit molestiae nostrum ad et laboriosam suscipit autem repellendus ipsa laboriosam, nihil dignissimos ullam repudiandae. Sequi voluptatum accusantium alias veniam neque maiores. Corporis accusamus numquam possimus et saepe? Modi deleniti.
+Amet aspernatur aut in quos vel ipsum eos alias consequuntur cum explicabo officiis, suscipit alias ut. Obcaecati fugit fugiat soluta eligendi labore soluta accusamus. Inventore facilis eligendi temporibus debitis cumque.
+</p>
+    </main>
+
+    <aside id="subnavigation" class="column">
+      <ul>
+        <li class="main-list coding">
+          <a class="list-heading">Coding</a>
+          <ul>
+            <li class="list-item">HTML</li>
+            <li class="list-item">CSS</li>
+            <li class="list-item">Javascript</li>
+            <li class="list-item">Techniques</li>
+          </ul>
+        </li>
+        <li class="main-list design">
+          <a class="list-heading">Design</a>
+          <ul>
+            <li class="list-item">Web Design</li>
+            <li class="list-item">Responsive</li>
+            <li class="list-item">Typography</li>
+            <li class="list-item">Inspiration</li>
+          </ul>
+        </li>
+        <li class="main-list mobile">
+          <a class="list-heading">Mobile</a>
+          <ul>
+            <li class="list-item">iPhone &amp; iPad</li>
+            <li class="list-item">Android</li>
+            <li class="list-item">Design Patterns</li>
+          </ul>
+        </li>
+        <li class="main-list graphics">
+          <a class="list-heading">Graphics</a>
+          <ul>
+            <li class="list-item">iPhone &amp; iPad</li>
+            <li class="list-item">Android</li>
+            <li class="list-item">Design Patterns</li>
+          </ul>
+        </li>
+        <li class="main-list ux-design">
+          <a class="list-heading">UX Design</a>
+          <ul>
+            <li class="list-item">User Experience</li>
+            <li class="list-item">UI Design</li>
+            <li class="list-item">E-Commerce</li>
+          </ul>
+        </li>
+        <li class="main-list wordpress">
+          <a class="list-heading">Wordpress</a>
+          <ul>
+            <li class="list-item">Essentials</li>
+            <li class="list-item">Techniques</li>
+            <li class="list-item">Plugins</li>
+            <li class="list-item">Themes</li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    </aside>
+
+    <aside id="advertising" class="column clearfix">
+      <form action="" method="get">
+        <label for="search">Search on Smashing Magazine</label>
+        <input type="text" id="search" name="search" placeholder="e.g. Javascript">
+        <button type="submit" class="submit">Search</button>
+      </form>
+    </aside>
+  </div>
 
   <footer>
+    <p>footer</p>
   </footer>
 </body>
 </html>

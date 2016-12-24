@@ -1,0 +1,63 @@
+@import url("reset.css");
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+html, body {
+  height: 100%;
+}
+
+div.container {
+  height: 100%;
+  overflow: hidden;
+}
+
+header, aside, main, footer {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+header, footer {
+  height: 100px;
+  width: 100%;
+  background-color: lightblue;
+  overflow: hidden;
+}
+
+main, aside {
+  float: left;
+  height: 100%;
+  padding-bottom: 100%;
+  margin-bottom: -100%;
+}
+
+main {
+  width: 50%;
+  background: pink;
+}
+
+aside {
+  width: 25%;
+  background: lightgreen;
+}
+
+aside.right {
+  position: relative;
+  top: -50px;
+}
+
+
+footer {
+  width: 100%
+}
