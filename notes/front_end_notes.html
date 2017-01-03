@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h3 id="frontendnotes">front end notes</h3>
+
+<ul>
+<li><p>CSS selectors</p></li>
+<li><p>a CSS selector defines which element the defined css properties apply to</p></li>
+<li>basic selectors
+
+<ul>
+<li>element selector: the element type selector selects based on the html element such as <code>body</code>, <code>article</code>, <code>li</code>, etc</li>
+<li>class selector: html elements can class applied to them with this syntax with multiple classes delimited by spaces</li>
+<li><code>&lt;p class=&quot;bolded&quot;&gt;paragraph text here&lt;/p&gt;</code></li>
+<li>in the css this element can be selected with the class selector: <code>bolded { font-weight: bold; }</code></li>
+<li>id selector: html elements can also be assigned an id as follows:</li>
+<li><code>&lt;p id=&quot;some-id&quot;&gt;paragraph text here&lt;/p&gt;</code></li>
+<li>element id&#8217;s must be unique in the document</li>
+<li>the hash symbol represents the id selector as in: <code>#some-id</code> { padding: 10px; }</li>
+<li>attribute selector: chooses nodes based on the value of an attribute assigned to the element</li>
+<li>html: <code>&lt;input type=&quot;button&quot; value=&quot;hello&quot;&gt;</code></li>
+<li>css: <code>input[type=&quot;button&quot;]: height: 40px; width: 100px;</code></li>
+<li>universal selector - selects all elements</li>
+<li><code>* border: 1px solid black;</code></li>
+</ul></li>
+<li>selector combinators
+
+<ul>
+<li>adjacent sibling <code>+</code>: selects all elements that are immediately after a certain parent</li>
+<li><code>div + p { }</code>: selects all <code>&lt;p&gt;</code> elements that immediately follow a <code>&lt;div&gt;</code></li>
+<li>general sibling <code>~</code>: selects all elements of a type that follow an element with in the same parent</li>
+<li>not necessarily immediately after</li>
+<li><code>div ~ p { }</code>: select all <code>&lt;p&gt;</code> elements that follow a <code>&lt;div&gt;</code>, within the same parent</li>
+<li>descendant: ` `: selects all elements that are child of the first element, not necessarily immediate children</li>
+<li><code>div p {}</code>: selects all of the <code>&lt;p&gt;</code> elements that are inside a div</li>
+<li>direct child <code>&gt;</code>: selects all of the elements that are directly a child of the first element</li>
+<li><code>div &gt; p {}</code>: selects all <code>&lt;p&gt;</code> elements that are directly inside of a <code>&lt;div&gt;</code></li>
+<li>additional <code>,</code>: selects all of the elements in the comma delimited list</li>
+<li><code>div, p, a, .red { }</code>: properties are applied to all of the selectors</li>
+</ul></li>
+<li>pseudo elements
+
+<ul>
+<li>pseudo elements are abstractions of the dom tree that provide elements beyond the scope of normal html</li>
+<li>they allow a way to style these abstracted elements independently</li>
+<li>syntax: <code>selector::pseudo-element { property: value }</code></li>
+<li>common pseudo element</li>
+<li>after: matches an inline (by default) virtual last child of the selected element. often used to add content via css, such as text,
+ a background image or for the clear fix solution.</li>
+<li>before: matches an inline (by default) virtual first child of the selected element. Often used to add cosmetic content to the element
+ such as a list-item graphic or an icon</li>
+<li>first-letter: provides for a subset of properties for styling the first letter</li>
+<li>first-line: provides for a limited subset of properties for styling the first line</li>
+<li>selection: provides for a limited subset of properites to style user selected text. Such as the <code>background-color</code> and <code>color</code></li>
+</ul></li>
+<li>pseudo classes
+
+<ul>
+<li>a pseudo class is added to an element and allows that element to be selected based on a certain state</li>
+<li>common pseudo classes</li>
+<li>checked: applies to checkbox, radio button and option input elements that can have an &#8216;on&#8217; state.
+ when the element is &#8216;on&#8217; then css selector properties are applied to the element</li>
+<li>first-child: selects the element that is the first child of its parent</li>
+<li>first-of-type: selects the first element of its type in the list of child elements of the parent.
+
+<ul>
+<li>the universal selector is assumed when there is no simple selector as in: <code>div :first-of-type { }</code></li>
+<li>first-of-type will select nested children as well</li>
+</ul></li>
+<li>nth-child(an+b):
+
+<ul>
+<li>matches an element that has an+b&#8211;1 siblings before it for a given positive value for n representing the position of the child in the series.</li>
+<li>the selector matches a number of child elements whose numeric position in the series of children matches the pattern an+b</li>
+<li><code>an+b</code>: means match the element at position <code>b</code> and then every <code>a</code> elements after that</li>
+<li><code>3n+4</code>: match the 4th element, and then every third one after that</li>
+<li><code>p:nth-child(1n+0)</code> or <code>p:nth-child(n)</code>: match every child element</li>
+<li><code>p:nth-child(2n)</code>: match <code>&lt;p&gt;</code> elements 2, 4, 6, 8 etc</li>
+<li><code>p:nth-child(even)</code>: match <code>&lt;p&gt;</code> elements that are even in the series. same as above.</li>
+<li><code>p:nth-child(odd)</code> or <code>p:nth-child(2n+1)</code>: match <code>&lt;p&gt;</code> elements that are odd in the series.</li>
+<li><code>p:nth-child(3n+4)</code>: match elements 4, 7, 10, 13, etc.</li>
+</ul></li>
+<li>hover
+
+<ul>
+<li>allows styling of an element the user positions the mouse pointer over the element</li>
+<li>can be overridden by other link related pseudo classes.</li>
+<li><dl>
+<dt>given this, make sure to call these properties in the proper order LVHA</dt>
+<dd>link, :visited, :hover, :active</dd>
+</dl></li>
+<li>:hover can be applied to :before and :after pseudo elements</li>
+</ul></li>
+<li>last-child
+
+<ul>
+<li>selects the last child element of the parent</li>
+</ul></li>
+<li>last-of-type
+
+<ul>
+<li>represents the last sibling of the given type in the list of children for the parent element</li>
+<li>question: do nested children count toward this list?</li>
+</ul></li>
+<li>link
+
+<ul>
+<li>selects any link that has not yet been visited</li>
+<li>be mindful of other pseudo classes and the order in css = :link, :visited, :hover, :active</li>
+</ul></li>
+<li>visited
+
+<ul>
+<li>selects any link that has been visited</li>
+<li>be mindful of other pseudo classes and the order in css = :link, :visited, :hover, :active</li>
+</ul></li>
+</ul></li>
+<li><p>box model</p></li>
+<li><p>html elements create a box on the page</p></li>
+<li><p>a box has height and width and z-index (depth)</p></li>
+<li><p>html documents display boxes on the page in order of appearance</p></li>
+<li>boxes have width, height, content, padding, border and margin (from inside to out)
+
+<ul>
+<li>content is the elements that exist as child elements of the element in question</li>
+<li>width and height encompass the area of the box and enclose its content</li>
+<li>padding is inner margin. It is the space between the margin and content
+ padding can be set with padding shorthand: padding: 10px 11px 12px 14px;
+ or by setting individual properties: padding-top, padding-bottom, padding-left, padding-right</li>
+<li>border is distinct layer sitting between the margin and padding</li>
+<li>border defaults to 0px in width</li>
+<li>border can be set with a shorthands style as in border: 1px solid black;</li>
+<li>individual borders can be set with, as example:
+
+<ul>
+<li>border-top-style, border-top-width, border-top-color</li>
+</ul></li>
+<li>margin represents the space outside of the box.</li>
+<li>margin will push against other elements in the document flow.</li>
+<li>margins collapse: when two boxes touch, the distance is the largest of the margins, not the sum.
+
+<ul>
+<li>this applies to top and bottom margin only</li>
+<li>occurs in three circumstances</li>
+<li>empty blocks: no border, padding or inline content to separate top and bottom margins</li>
+<li>adjacent siblings</li>
+<li>parent and first child/last child: if there is no border, padding or inline content to separate the parent and child margin</li>
+</ul></li>
+</ul></li>
+<li><p>style resets</p></li>
+<li><p>different browsers have there own &#8220;user agent&#8221; style sheet that
+applies a set of standard styles to elements so that unstyled webpages have some basic styling
+to make the content more readable.</p></li>
+<li><p>a css reset removes all of this styling so that design can start from unified base for all browsers</p></li>
+<li><p>floats</p></li>
+<li><p>a floated box is positioned in the normal flow, then taken out of the flow and shifted to the right or left.</p></li>
+<li>floated elements are taken out of the normal flow in relation to other block elements.
+
+<ul>
+<li>a <p> element is a block element and its borders will encompass a floated block since the floated
+ block is invisible to other blocks</li>
+<li>the text inside the <p> element however is inline and will flow around the floated element.</li>
+</ul></li>
+<li><p>inline element content within the normal flow then flows around the floated element.</p></li>
+<li><p>floated elements is shifted to the right or left on the current line.</p></li>
+<li><p>width should always be set on a floated element to avoid unpredictable results.</p></li>
+<li><p>floated elements without a width will fill the containing block horizontally</p></li>
+<li><p>floated elements will behave better if they have a width set</p></li>
+<li><p>if you float more than one element in the same container they will stack
+up horizontally until they run out of horizontal space</p></li>
+<li><p>floated elements move left or right until they touch the outer edge
+of the containing block or its padding, or the outer edge of another float.</p></li>
+<li>surrouding inline content flows around the opposite side of a floated element
+
+<ul>
+<li>if the element is floated left, inline content flows to the right side</li>
+<li>if the element is floated right, inline content flows to the left side.</li>
+</ul></li>
+<li>collapsing and clearing
+
+<ul>
+<li>the container of a float collapses to 0 height, but when???</li>
+<li>a float is not in the normal flow therefore:</li>
+<li>non-positioned and non-floated blocks flow vertically as if the float
+ didn&#8217;t exist.</li>
+<li>they will appear under the floated elements</li>
+<li>Inline elements will wrap around the floated element.</li>
+<li>floated inline elements are converted to block elements</li>
+<li>to clear a float so that the wrapping does not occur:</li>
+<li>apply the &#8216;clear&#8217; property to the element following the floated element</li>
+<li>apply <code>overflow: hidden;</code> and apply a width to the containing element
+
+<ul>
+<li>the disadvantage here is that positioned elements or content may be clipped</li>
+</ul></li>
+<li>create an empty div following the cleared elements and apply &#8216;clear: both&#8217;</li>
+<li>create a pseudo after element that has the following:
+
+<ul>
+<li>content: &#8220; &#8221;;</li>
+<li>clear: both;</li>
+<li>although this is not the complete fix
+ also helpful to generate the content for the before pseudo element as well</li>
+</ul></li>
+<li>clear fix is really about float containment:
+
+<ul>
+<li>this is a technique for forcing a float-containing block level element
+ to span the entire height its floated children. To &#8220;contain&#8221; them!</li>
+</ul></li>
+<li>the &#8216;clear: both&#8217; property forces the element to render below any floats.</li>
+</ul></li>
+</ul>
+
+<p>positioning
+ - position: relative allows you to move the element around visually, however it
+ still occupies the same position in relationship to the normal document flow.
+ - position: absolute removes the element from the document flow, and allows you to position
+ the element relative to the coordinate system of the nearest relatively positioned parent
+ - position: fixed allows you to position the element relative to the viewport or screen.
+ the user will always see this element
+ - the position of an element can be modified with the top, bottom, left and right properties
+ - top: 10px moves the element 10 pixels down from top edge of the element.
+ - top: &#8211;10px moves the element 10 pixels up from top
+ - bottom: 10px moves the element 10 pixels up from the bottom
+ - bottom: &#8211;10px moves the element 10 pixels down from the bottom
+ - left: 10px 10 px from the left
+ - left: &#8211;10px to the left of left margin
+ - z-index property allows you to set the stacking priority of an element relative to other elements in the same container.
+ - css comes with a default stacking order
+ - background and borders of root element
+ - descendent blocks in the normal flow in order of appearance
+ - floating blocks
+ - inline descendants in the normal flow
+ - descendant positioned elements in the order of appearance
+ - to change the z-index, the element must be postioned.
+ - the default z-index is 0
+ - if any of the elements are positioned, then all of them should be positioned.<br/>
+ - otherwise z-index does not work as expect (the positioned element will be on top)
+ - stacking context: stacking context can be created in a variety of ways
+ - stacking context can be contained in another stacking context, creating a heirarchy
+ - a context is completely independent of its siblings: only descendants are considered with processing stacking order.
+ - a context is self contained. everything is stacked in the element and then the stacking order of element is considered
+ as a whole in the stacking inside its parent
+ - context is created in the following ways (although there are others)
+ - the <html> element
+ - a positioned element in z-index other than auto
+ - element with opacity less than 1
+ - position fixed</p>
+
+<ul>
+<li><p>display properties such as block, inline, and inline-block</p></li>
+<li><p>the display property defines how a element behaves in the document</p></li>
+<li><p>every element has a default value for display, generally either inline or block</p></li>
+<li>there are many properties. the most important are: none, inline, inline-block, block
+
+<ul>
+<li><code>display: none;</code> will remove the element and all of its children from the document.</li>
+<li>this is different from <code>visibility: hidden;</code> which simple hides the element while
+it still takes up space in the document</li>
+<li><code>display: block;</code> elements start a new line take up the entire width of their containing element</li>
+<li>examples: div, main, p, form, article, section, header, footer, img</li>
+<li><code>display: inline;</code> the elements <code>&lt;span&gt;</code>, <code>&lt;b&gt;</code> and <code>&lt;em&gt;</code> as well as all text defaults to inline</li>
+<li>inline elements are stacked left to right on a line until they
+run out of room, then then wrap to the next line</li>
+<li>inline elements cannot have top and bottom margin or padding</li>
+<li>they can have left and right margin and padding</li>
+<li><code>display: inline-block;</code></li>
+<li>makes block elements flow left to right</li>
+<li>allows setting vertical margin and padding on inline elements</li>
+<li><code>inline-block</code> adjacent siblings will have a space between them
+
+<ul>
+<li>this space can be eliminated by</li>
+<li>placing a comment between them: <code>&lt;/li&gt;&lt;!-- --&gt;&lt;li&gt;</code></li>
+<li>put the elements inline in the markup: <code>&lt;li&gt;foo&lt;/li&gt;&lt;li&gt;bar&lt;/li&gt;</code></li>
+<li>adding a right margin of &#8211;4 px: <code>margin-right: -4px;</code></li>
+<li>applying <code>font-size: 0;</code> to the parent element and setting the font size for the child elements explicitly.</li>
+</ul></li>
+<li><code>inline-block</code> adjacent siblings are vertically aligned on the bottom.
+this can be fixed with <code>vertical-align: top;</code></li>
+</ul></li>
+<li><p>shorthand properties</p></li>
+<li>many properties provide for a shorthand version to set multiple properties in one line of code
+
+<ul>
+<li>have to be careful, as properties omitted from the shorthand will be set to the initial value
+ this may have unexpected consequences</li>
+<li><code>inherit</code> can only be applied to a shorthand property, but only to the entire property
+ not as a keyword for individual properties</li>
+<li>most shorthand properties attempt to not require an order to the keywords and values</li>
+<li>properties that set attributes to the sides or corners do require an order and allow for 1, 2, 3 or 4 different values
+ the meaning of these values is described below</li>
+</ul></li>
+<li>margin and padding are treated similarly:
+
+<ul>
+<li>all four sides (top, right, bottom left): <code>margin: 10px 15px 20px 0;</code></li>
+<li>top/bottom, left/right equal: <code>margin: 10px 15px;</code></li>
+<li>top/bottom separate, left/right equal: <code>margin: 10px 20px 15px;</code></li>
+<li>top/bottom/left/right all equal: <code>margin: 10px;</code></li>
+</ul></li>
+<li>border
+
+<ul>
+<li>border has 3 properties: width, style (solid, dashed, dotted), color, side</li>
+<li><code>border-right-color: red;</code> <code>border-left-width: 10px;</code> etc.</li>
+<li>shorthand: <code>border: 4px solid seagreen;</code></li>
+<li>the values can be in any order</li>
+<li>shorthand: <code>border-style: dotted ridge dashed solid;</code></li>
+</ul></li>
+<li><p>border-radius</p></li>
+<li>background
+
+<ul>
+<li>properties: <code>background-color</code>, <code>background-repeat</code>, <code>background-position</code>, <code>background-image</code></li>
+</ul></li>
+<li>font
+
+<ul>
+<li>the properties should be listed in a specific order</li>
+<li>at a minimum you must provide <code>font-size</code> and <code>font-family</code></li>
+<li><code>font: font-style font-variant font-weight font-size/line-height font-family;</code></li>
+</ul></li>
+<li><p>list-style</p></li>
+<li><p>sprites</p></li>
+<li><p>sprites are sheets of images that are used on a webpage</p></li>
+<li><p>they reduce the number of requests for assets from the server, improving site performance</p></li>
+<li><p>apply <code>position: relative;</code> to the sprite sheet</p></li>
+<li><p>then use the <code>top</code>, <code>right</code>, <code>bottom</code> and <code>left</code> properties to move the sprite sheet around</p></li>
+<li><p>media queries</p></li>
+</ul>
+
+</body>
+</html>
