@@ -230,6 +230,7 @@ aside input {
   color: #fff;
   border-radius: 0 10px 10px 0;
 }
+
 /********** navigation aside **********/
 
 #subnavigation {
@@ -286,3 +287,12 @@ aside input {
 #subnavigation li.wordpress {
   border-color: #bad8f2;
 }
+
+/********** articles **********/
+
+main article h2 {
+  font: 32px "Times New Roman", serif;
+  font-weight: bold;
+}
+
+

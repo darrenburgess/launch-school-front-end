@@ -1,5 +1,64 @@
 @import url("reset.css");
 
+p {
+}
+
+p::selection {
+  color: blue;
+  background: yellow;
+  text-decoration: underline;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+}
+
+.green {
+  background: seagreen;
+}
+
+.blue {
+  background: skyblue;
+  margin: 10px 30px 50px 60px;
+  border: 3px black solid;
+}
+
+.purple {
+  background: purple;
+}
+
+.purple::before {
+  content: "hello";
+  color: white;
+}
+
+.purple::after {
+  content: "again";
+  color: white;
+}
+
+.purple p {
+  color: white;
+}
+
+.pseudo {
+  background: yellow;
+  width: 300px;
+}
+
+.pseudo p:first-of-type {
+  font-weight: bold;
+}
+
+main {
+  border: 3px solid black;
+}
+
+.floated {
+  float: left;
+}
+
 .clearfix:before,
 .clearfix:after {
   content: "";
@@ -14,50 +73,14 @@
   zoom: 1;
 }
 
-html, body {
-  height: 100%;
-}
-
-div.container {
-  height: 100%;
+.clear-hidden {
   overflow: hidden;
 }
 
-header, aside, main, footer {
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-header, footer {
-  height: 100px;
-  width: 100%;
-  background-color: lightblue;
-  overflow: hidden;
-}
-
-main, aside {
+.clear-float {
   float: left;
-  height: 100%;
-  padding-bottom: 100%;
-  margin-bottom: -100%;
 }
 
-main {
-  width: 50%;
-  background: pink;
-}
-
-aside {
-  width: 25%;
-  background: lightgreen;
-}
-
-aside.right {
-  position: relative;
-  top: -50px;
-}
-
-
-footer {
-  width: 100%
+.clear-element {
+  clear: both;
 }

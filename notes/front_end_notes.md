@@ -247,4 +247,13 @@ positioning
   - then use the `top`, `right`, `bottom` and `left` properties to move the sprite sheet around
 
 * media queries
-
+  - media queries limit the scope of a style sheet by specifying the conditions that
+    would activate the selectors in the style sheet
+  - available expressions that are evaluated to determine if a style sheet applies
+    - width
+    - height
+    - device-width
+    - device-height
+    - min-width
+    - max-width
+    - orientation: portrait, landscape    
