@@ -11,7 +11,6 @@
 
 <ul>
 <li>a CSS selector defines which element the defined css properties apply to</li>
-</ul></li>
 <li>basic selectors
 
 <ul>
@@ -44,7 +43,7 @@
 <li>selector combinators
 
 <ul>
-<li>adjacent sibling <code>+</code>: selects all elements that are immediately after a certain parent
+<li>adjacent sibling <code>+</code>: selects the element that immediately follows the specified element
 
 <ul>
 <li><code>div + p { }</code>: selects all <code>&lt;p&gt;</code> elements that immediately follow a <code>&lt;div&gt;</code></li>
@@ -126,10 +125,8 @@
 <li>can be overridden by other link related pseudo classes.
 
 <ul>
-<li><dl>
-<dt>given this, make sure to call these properties in the proper order LVHA</dt>
-<dd>link, :visited, :hover, :active</dd>
-</dl></li>
+<li>given this, make sure to call these properties in the proper order LVHA
+ :link, :visited, :hover, :active</li>
 </ul></li>
 <li>:hover can be applied to :before and :after pseudo elements</li>
 </ul></li>
@@ -155,6 +152,7 @@
 <ul>
 <li>selects any link that has been visited</li>
 <li>be mindful of other pseudo classes and the order in css = :link, :visited, :hover, :active</li>
+</ul></li>
 </ul></li>
 </ul></li>
 <li>box model
@@ -434,6 +432,10 @@ to span the entire height its floated children. To &#8220;contain&#8221; them!</
 <ul>
 <li>media queries limit the scope of a style sheet by specifying the conditions that
  would activate the selectors in the style sheet</li>
+<li>media queries provide a media type and then 0 or more expressions that check the state of a media feature</li>
+<li>types include things like <code>screen</code> and <code>print</code></li>
+<li>media features are most typically expressions related to the width of the screen or page</li>
+<li>can be added using the link tag as in: <code>&lt;link rel=&quot;stylesheet&quot; media=&quot;(max-width: 600px)&quot;</code></li>
 <li>available expressions that are evaluated to determine if a style sheet applies
 
 <ul>

@@ -2,80 +2,80 @@
 
 * CSS selectors
     - a CSS selector defines which element the defined css properties apply to
-  - basic selectors
-      - element selector: the element type selector selects based on the html element such as `body`, `article`, `li`, etc
-      - class selector: html elements can class applied to them with this syntax with multiple classes delimited by spaces
-          - `<p class="bolded">paragraph text here</p>`
-          - in the css this element can be selected with the class selector: `bolded { font-weight: bold; }`
-      - id selector: html elements can also be assigned an id as follows:
-          - `<p id="some-id">paragraph text here</p>`
-          - element id's must be unique in the document
-          - the hash symbol represents the id selector as in: `#some-id` { padding: 10px; } 
-      - attribute selector: chooses nodes based on the value of an attribute assigned to the element
-          - html: `<input type="button" value="hello">`
-          - css: `input[type="button"]: height: 40px; width: 100px;`
-      - universal selector - selects all elements
-          - `* border: 1px solid black;`
-  - selector combinators
-      - adjacent sibling `+`: selects all elements that are immediately after a certain parent
-          - `div + p { }`: selects all `<p>` elements that immediately follow a `<div>`
-      - general sibling `~`: selects all elements of a type that follow an element with in the same parent
-          - not necessarily immediately after
-          - `div ~ p { }`: select all `<p>` elements that follow a `<div>`, within the same parent
-      - descendant: ` `: selects all elements that are child of the first element, not necessarily immediate children
-          - `div p {}`: selects all of the `<p>` elements that are inside a div
-      - direct child `>`: selects all of the elements that are directly a child of the first element
-          - `div > p {}`: selects all `<p>` elements that are directly inside of a `<div>`
-      - additional `,`: selects all of the elements in the comma delimited list
-          - `div, p, a, .red { }`: properties are applied to all of the selectors
-  - pseudo elements
-      - pseudo elements are abstractions of the dom tree that provide elements beyond the scope of normal html
-      - they allow a way to style these abstracted elements independently
-      - syntax: `selector::pseudo-element { property: value }`
-      - common pseudo element
-          - after: matches an inline (by default) virtual last child of the selected element. often used to add content via css, such as text,
-                a background image or for the clear fix solution.
-      - before: matches an inline (by default) virtual first child of the selected element. Often used to add cosmetic content to the element
-                 such as a list-item graphic or an icon
-      - first-letter: provides for a subset of properties for styling the first letter
-      - first-line: provides for a limited subset of properties for styling the first line
-      - selection: provides for a limited subset of properites to style user selected text. Such as the `background-color` and  `color`
-  - pseudo classes
-      - a pseudo class is added to an element and allows that element to be selected based on a certain state
-      - common pseudo classes
-          - checked: applies to checkbox, radio button and option input elements that can have an 'on' state. 
-                 when the element is 'on' then css selector properties are applied to the element
-          - first-child: selects the element that is the first child of its parent
-          - first-of-type: selects the first element of its type in the list of child elements of the parent.
-              - the universal selector is assumed when there is no simple selector as in: `div :first-of-type { }` 
-              - first-of-type will select nested children as well
-          - nth-child(an+b): 
-              - matches an element that has an+b-1 siblings before it for a given positive value for n representing the position of the child in the series.
-              - the selector matches a number of child elements whose numeric position in the series of children matches the pattern an+b
-              - `an+b`: means match the element at position `b` and then every `a` elements after that
-              - `3n+4`: match the 4th element, and then every third one after that
-              - `p:nth-child(1n+0)` or `p:nth-child(n)`: match every child element
-          - `p:nth-child(2n)`: match `<p>` elements 2, 4, 6, 8 etc
-          - `p:nth-child(even)`: match `<p>` elements that are even in the series.  same as above.
-          - `p:nth-child(odd)` or `p:nth-child(2n+1)`: match `<p>` elements that are odd in the series.
-          - `p:nth-child(3n+4)`: match elements 4, 7, 10, 13, etc.
-      - hover
-          - allows styling of an element the user positions the mouse pointer over the element
-          - can be overridden by other link related pseudo classes.
-              - given this, make sure to call these properties in the proper order LVHA
-                :link, :visited, :hover, :active
-          - :hover can be applied to :before and :after pseudo elements
-      - last-child
-          - selects the last child element of the parent
-      - last-of-type
-          - represents the last sibling of the given type in the list of children for the parent element
-          - question: do nested children count toward this list?
-      - link
-          - selects any link that has not yet been visited
-          - be mindful of other pseudo classes and the order in css = :link, :visited, :hover, :active
-      - visited
-          - selects any link that has been visited
-          - be mindful of other pseudo classes and the order in css = :link, :visited, :hover, :active
+    - basic selectors
+        - element selector: the element type selector selects based on the html element such as `body`, `article`, `li`, etc
+        - class selector: html elements can class applied to them with this syntax with multiple classes delimited by spaces
+            - `<p class="bolded">paragraph text here</p>`
+            - in the css this element can be selected with the class selector: `bolded { font-weight: bold; }`
+        - id selector: html elements can also be assigned an id as follows:
+            - `<p id="some-id">paragraph text here</p>`
+            - element id's must be unique in the document
+            - the hash symbol represents the id selector as in: `#some-id` { padding: 10px; } 
+        - attribute selector: chooses nodes based on the value of an attribute assigned to the element
+            - html: `<input type="button" value="hello">`
+            - css: `input[type="button"]: height: 40px; width: 100px;`
+        - universal selector - selects all elements
+            - `* border: 1px solid black;`
+    - selector combinators
+        - adjacent sibling `+`: selects the element that immediately follows the specified element 
+            - `div + p { }`: selects all `<p>` elements that immediately follow a `<div>`
+        - general sibling `~`: selects all elements of a type that follow an element with in the same parent
+            - not necessarily immediately after
+            - `div ~ p { }`: select all `<p>` elements that follow a `<div>`, within the same parent
+        - descendant: ` `: selects all elements that are child of the first element, not necessarily immediate children
+            - `div p {}`: selects all of the `<p>` elements that are inside a div
+        - direct child `>`: selects all of the elements that are directly a child of the first element
+            - `div > p {}`: selects all `<p>` elements that are directly inside of a `<div>`
+        - additional `,`: selects all of the elements in the comma delimited list
+            - `div, p, a, .red { }`: properties are applied to all of the selectors
+    - pseudo elements
+        - pseudo elements are abstractions of the dom tree that provide elements beyond the scope of normal html
+        - they allow a way to style these abstracted elements independently
+        - syntax: `selector::pseudo-element { property: value }`
+        - common pseudo element
+            - after: matches an inline (by default) virtual last child of the selected element. often used to add content via css, such as text,
+                  a background image or for the clear fix solution.
+        - before: matches an inline (by default) virtual first child of the selected element. Often used to add cosmetic content to the element
+                   such as a list-item graphic or an icon
+        - first-letter: provides for a subset of properties for styling the first letter
+        - first-line: provides for a limited subset of properties for styling the first line
+        - selection: provides for a limited subset of properites to style user selected text. Such as the `background-color` and  `color`
+    - pseudo classes
+        - a pseudo class is added to an element and allows that element to be selected based on a certain state
+        - common pseudo classes
+            - checked: applies to checkbox, radio button and option input elements that can have an 'on' state. 
+                   when the element is 'on' then css selector properties are applied to the element
+            - first-child: selects the element that is the first child of its parent
+            - first-of-type: selects the first element of its type in the list of child elements of the parent.
+                - the universal selector is assumed when there is no simple selector as in: `div :first-of-type { }` 
+                - first-of-type will select nested children as well
+            - nth-child(an+b): 
+                - matches an element that has an+b-1 siblings before it for a given positive value for n representing the position of the child in the series.
+                - the selector matches a number of child elements whose numeric position in the series of children matches the pattern an+b
+                - `an+b`: means match the element at position `b` and then every `a` elements after that
+                - `3n+4`: match the 4th element, and then every third one after that
+                - `p:nth-child(1n+0)` or `p:nth-child(n)`: match every child element
+            - `p:nth-child(2n)`: match `<p>` elements 2, 4, 6, 8 etc
+            - `p:nth-child(even)`: match `<p>` elements that are even in the series.  same as above.
+            - `p:nth-child(odd)` or `p:nth-child(2n+1)`: match `<p>` elements that are odd in the series.
+            - `p:nth-child(3n+4)`: match elements 4, 7, 10, 13, etc.
+        - hover
+            - allows styling of an element the user positions the mouse pointer over the element
+            - can be overridden by other link related pseudo classes.
+                - given this, make sure to call these properties in the proper order LVHA
+                  :link, :visited, :hover, :active
+            - :hover can be applied to :before and :after pseudo elements
+        - last-child
+            - selects the last child element of the parent
+        - last-of-type
+            - represents the last sibling of the given type in the list of children for the parent element
+            - question: do nested children count toward this list?
+        - link
+            - selects any link that has not yet been visited
+            - be mindful of other pseudo classes and the order in css = :link, :visited, :hover, :active
+        - visited
+            - selects any link that has been visited
+            - be mindful of other pseudo classes and the order in css = :link, :visited, :hover, :active
 
 * box model
     - html elements create a box on the page
@@ -248,6 +248,10 @@
 * media queries
     - media queries limit the scope of a style sheet by specifying the conditions that
       would activate the selectors in the style sheet
+    - media queries provide a media type and then 0 or more expressions that check the state of a media feature
+    - types include things like `screen` and `print`
+    - media features are most typically expressions related to the width of the screen or page
+    - can be added using the link tag as in: `<link rel="stylesheet" media="(max-width: 600px)"`
     - available expressions that are evaluated to determine if a style sheet applies
         - width
         - height

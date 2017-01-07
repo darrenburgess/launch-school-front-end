@@ -1,0 +1,135 @@
+/*@import url("reset.css");*/
+
+/* general page styles */
+
+body {
+  font: 16px Helvetica, Arial, sans-serif;
+  background: antiquewhite;
+}
+
+.indented {
+  margin: 25px;
+}
+
+h5 {
+  margin: 0 0 10px 0;
+}
+
+#container {
+  border: 1px solid black;
+  background: floralwhite;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 1200px;
+  padding: 30px;
+}
+
+.example {
+  border: 1px solid black;
+  background: lightgrey;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 30px;
+  width: 75%;
+}
+
+.result {
+  border: 1px dashed black;
+  padding: 20px;
+  background: white;
+}
+
+.sub-result {
+  border: 1px dotted grey;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+xmp {
+  font-weight: bold;
+  color: white;
+  border: 1px solid black;
+  margin: 0 0 25px 0;
+  background: darkslategrey;
+}
+
+/* example classes */
+
+div.example {
+  border: 1px dashed black;
+  padding: 10px;
+}
+
+/* simple selectors */
+.bold {
+  font-weight: bold;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+
+/* attribute selectors */
+
+input[type="text"] {
+  border: 2px solid blue; 
+  height: 30px;
+  width: 150px;
+}
+
+span[lang] {
+  font-weight: bold;
+} 
+
+span[lang~="sp"] {
+  color: blue
+}
+
+/* universal selector */
+
+div.universal {
+  border: 1px dashed black;
+  padding: 10px;
+}
+div.universal * {
+  color: orange;
+}
+
+/************************/
+/* selector combinators */
+/************************/
+
+/* adjacent sibling */
+p#p-with-id + p {
+  font-weight: bold;
+}
+
+/* general sibling */
+div.general h4 ~ p {
+  font-weight: bold;
+  color: seagreen;
+}
+
+/* descendant */
+div.descendant span {
+  font-weight: 900;
+  color: skyblue;
+}
+
+/* direct-child */
+div#direct-child > p {
+  font-weight: bold;
+}
+
+/* grouping */
+.grouping h1, 
+.grouping h2, 
+.grouping h3 {
+  font-weight: normal;
+  color: blue;
+}
+

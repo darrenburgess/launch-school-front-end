@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Cheat Sheet</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div id="container">
+
+    <h1>CSS Examples</h1>
+
+    <section class="basic-selectors">
+      <h2>CSS Selectors</h2>
+      <p>A CSS selector defines which element the defined css properties apply to.</p>
+      <h3>Basic selectors</h3>
+      <h4 class="indented">Element Selector</h4>
+      <p class="indented">The element type selector selects based on the html element such as `body`, `article`, `li`, etc</p>
+      <div class="example">
+        <h5>HTML</h5>
+        <xmp>
+        <p>How, now, brown, cow</p>
+        </xmp>
+
+        <h5>CSS</h5>
+        <xmp>
+        p {
+        font-weight: bold;
+        }
+        </xmp>
+
+        <h5>Result</h5>
+        <div class="result">
+          <p class="bold">How, now, brown, cow</p>
+        </div>
+      </div>
+
+      <h4 class="indented">Class Selector</h4>
+      <p class="indented">HTML elements can have a class applied to them with this syntax with multiple classes delimited by spaces. In the CSS this element can be selected with the class selector.</p>
+
+      <div class="example">
+        <h5>HTML</h5>
+        <xmp>
+        <p class="bolded">How, now, brown, cow</p>
+        </xmp>
+
+        <h5>CSS</h5>
+        <xmp>
+        .bolded {
+        font-weight: bold;
+        color: blue;
+        }
+        </xmp>
+
+        <h5>Result</h5>
+        <div class="result">
+          <p class="bold blue">How, now, brown, cow</p>
+        </div>
+      </div>
+
+      <h4 class="indented">ID Selector</h4>
+      <p class="indented">HTML elements can also be assigned an id. Element ID's must be unique in the document. The hash symbol is used to denote an ID selector in the CSS</p>
+
+      <div class="example">
+        <h5>HTML</h5>
+        <xmp>
+        <p id="brown-cows">How, now, brown, cow</p>
+        </xmp>
+
+        <h5>CSS</h5>
+        <xmp>
+        #brown-cows {
+        font-weight: bold;
+        color: green;
+        }
+        </xmp>
+
+        <h5>Result</h5>
+        <div class="result">
+          <p class="bold green">How, now, brown, cow</p>
+        </div>
+      </div>
+
+      <h4 class="indented">Attribute Selector</h4>
+      <p class="indented">Chooses nodes based on the value of an attribute assigned to the element.</p>
+      <p class="indented">There are several ways to target attributes. More examples can be found at <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">MDN</a></p>
+
+      <div class="example">
+        <h5>HTML</h5>
+        <xmp>
+        <form action="#" method="get">
+          <input type="text" placeholder="Text type input">
+        </form>
+
+        <p><span lang="en">this is a bold span</span></p>
+        <p><span lang="ch sp">this a blue bold span</span></p>
+        </xmp>
+
+        <h5>CSS</h5>
+        <xmp>
+        /* select using the type attribute */
+        input[type="text"] {
+        border: 2px solid blue; 
+        height: 30px;
+        width: 150px;
+        }
+
+        /* all spans with a lang attribute are bold */
+        span[lang] {
+        font-weight: bold;
+        } 
+
+        /* all spans with a lang attribute = "sp" */
+        /* in a white space delimited list */
+        span[lang~="sp"] {
+        color: blue
+        }
+        </xmp>
+
+        <h5>Result</h5>
+        <div class="result">
+          <form action="#" method="get">
+            <input type="text" placeholder="Text type input">
+          </form>
+
+          <p><span lang="en">this is a bold span</span></p>
+          <p><span lang="ch sp">this a blue bold span</span></p>
+        </div>
+      </div>
+
+      <h4 class="indented">Universal Selector</h4>
+      <p class="indented">Selects all elements and can be chained to make it more specific. The universal selector can also be used to select all elements in the page. This is generally not a good idea.</p>
+
+      <div class="example">
+        <h5>HTML</h5>
+        <xmp>
+        <div class="universal">
+          <p><span>span 1 in the universal div</span></p>
+        </div>
+        <p><span>span 2 outside the div</span></p>
+        </xmp>
+
+        <h5>CSS</h5>
+        <xmp>
+        /* selects all elements in the div with class universal */
+        div.universal * {
+        color: orange;
+        }
+        </xmp>
+
+        <h5>Result</h5>
+        <div class="universal">
+          <p><span>span 1 in the universal div</span></p>
+        </div>
+        <p><span>span 2 outside the div</span></p>
+      </div>
+    </section>
+
+    <section class="selector-combinators">
+      <h3>Selector Combinators</h3>
+      <p>Selectors can be combined together with various operators to achieve more precise element selection.</p>
+
+      <h4 class="indented">Adjacent Sibling (+)</h4>
+      <p class="indented">Selects the element that immediately follows the former specified element.</p>
+
+      <h4 class="indented">General Sibling (~)</h4>
+      <p class="indented">Selects all elements of a type that follow an element within the same parent, not necessarily immediately after.</p>
+
+      <h4 class="indented">Descendant ( )(a space)</h4>
+      <p class="indented">Selects all elements that are child of the first element, not necessarily immediate children.</p>
+
+      <h4 class="indented">Direct Child (>)</h4>
+      <p class="indented">Selects all of the elements that are directly a child of the first element</p>
+
+      <h4 class="indented">Grouping (,)</h4>
+      <p class="indented">Selects all of the elements in the comma delimited list. This provides a way to apply the same styles to each selected element.</p>
+      <div class="example">
+        <h5>CSS</h5>
+        <xmp>
+        /* Adjacent Sibling: */
+        /*   selects <p> that immediately */
+        /*   follows <p class="some-class"> */
+        p.some-class + p { } 
+
+        /* General Sibling */
+        /*   selects all <span> following a <p> in the same parent */
+          p ~ span { }
+
+          /* Descendant */
+          /*   selects all <p> elements inside of <div class="class"> */
+            div.class p { }
+
+            /* Direct Child */
+            /*   selects all <p> elements that are immediate */
+            /*   children of <div class="class"> */
+              div.class > p { }
+
+              /* Grounping */
+              /*   selects all elements in the comma delimited list *
+              h1, h2, h3, h4, .bolded { } 
+        </xmp>
+
+        <h5>Result</h5>
+        <div class="result">
+          <div class="adjacent sub-result">
+            <h4>Adjacent Sibling:</h4>
+            <p id="p-with-id">Here is a paragraph with an id</p>
+            <p>this is the adjacent sibling, bolded</p>
+            <p>another paragraph, not selected</p>
+          </div>
+          <div class="general sub-result">
+            <h4>General Sibling:</h4>
+            <p>A paragraph</p>
+            <span>A span</span>
+            <p>Another paragraph</p>
+            <span>Another span</span>
+          </div>
+          <div class="descendant sub-result">
+            <h4>Descendant:</h4>
+            <p>A paragraph</p>
+            <span>A span not inside a div</span>
+            <div>
+              <span>A span in side a div</span>
+            </div>
+          </div>
+          <div class="direct-child sub-result">
+            <h4>Direct Child:</h4>
+            <div id="direct-child">
+              <p>Inside a div: This is the direct child paragraph</p>
+              <p>Inside the same div: Another paragraph, not direct child</p>
+              <div>
+                <p>this paragraph is in a div (a grandchild) and won't be selected</p>
+              </div>
+            </div>
+          </div>
+          <div class="grouping sub-result">
+            <h4>Grouping:</h4>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+          </div>
+        </div>
+            </div>
+    </section>
+
+    <section class="pseudo-elemets">
+      <h3>Pseudo Elements</h3>
+      <p>Pseudo elements are abstractions of the dom tree that provide elements beyond the scope of normal html. They allow a way to style these abstracted elements independently. Syntax: <code>selector::pseudo-element { property: value }</code></p>
+      <h4 class="indented">::after</h4> 
+      <p class="indented">Matches an inline (by default) virtual last child of the selected element. often used to add content via css, such as text, a background image or for the clear fix solution.</p>
+      <h4 class="indented">::before</h4> 
+      <p class="indented">An inline (by default) virtual first child of the selected element. Often used to add cosmetic content to the element such as a list-item graphic or an icon.</p>
+      <h4 class="indented">::first-letter</h4> 
+      <p class="indented">Provides ability to select the first letter of a line.</p>
+
+      <h4 class="indented">::first-line</h4> 
+      <p class="indented">Provides ability to select the first line of a paragraph.</p>
+
+      <h4 class="indented">::selection</h4> 
+      <p class="indented">Provides for a limited subset of properites to style user selected text. Such as the <code>background-color</code> and  <code>color</code>.</p>
+    </section>
+
+    <section class="pseudo-classes">
+    </section>
+
+    <section class="box-model">
+    </section>
+
+    <section class="style-resets">
+    </section>
+
+    <section class="floats">
+    </section>
+
+    <section class="positioning">
+    </section>
+
+    <section class="display-properties">
+    </section>
+
+    <section class="shorthand-properties">
+    </section>
+
+    <section class="sprites">
+    </section>
+
+    <section class="media-queries">
+    </section>
+  </div>
+</body>
+</html>
