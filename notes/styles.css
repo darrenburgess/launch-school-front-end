@@ -133,3 +133,77 @@ div#direct-child > p {
   color: blue;
 }
 
+/************************/
+/* sprites              */
+/************************/
+
+section.sprites ul {
+  list-style: none;
+}
+
+section.sprites li {
+  position: relative;
+}
+
+section.sprites li:before {
+  content: "";
+  background: url("sprite-sheet.png") 0 0 no-repeat;
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  overflow: hidden;
+  left: -30px;
+}
+
+section.sprites li:nth-child(2):before {
+  background-position: 0 -30px;
+}
+
+section.sprites li:nth-child(3):before {
+  background-position: 0 -60px;
+}
+
+section.sprites li:nth-child(4):before {
+  background-position: 0 -90px;
+}
+
+section.sprites li:nth-child(5):before {
+  background-position: 0 -120px;
+}
+
+section.sprites li:nth-child(6):before {
+  background-position: 0 -150px;
+}
+
+section.sprites li:nth-child(7):before {
+  background-position: 0 -180px;
+}
+
+section.sprites li:nth-child(8):before {
+  background-position: -30px 0;
+}
+
+section.sprites li:nth-child(9):before {
+  background-position: -30px -30px;
+}
+
+section.sprites li:nth-child(10):before {
+  background-position: -30px -60px;
+}
+
+section.sprites li:nth-child(11):before {
+  background-position: -30px -90px;
+}
+
+section.sprites li:nth-child(12):before {
+  background-position: -30px -120px;
+}
+
+section.sprites li:nth-child(13):before {
+  background-position: -30px -150px;
+}
+
+section.sprites li:nth-child(14):before {
+  background-position: -30px -180px;
+}
+

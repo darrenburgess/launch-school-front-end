@@ -36,7 +36,7 @@
             - after: matches an inline (by default) virtual last child of the selected element. often used to add content via css, such as text,
                   a background image or for the clear fix solution.
         - before: matches an inline (by default) virtual first child of the selected element. Often used to add cosmetic content to the element
-                   such as a list-item graphic or an icon
+                   such as a list-item graphic or an 
         - first-letter: provides for a subset of properties for styling the first letter
         - first-line: provides for a limited subset of properties for styling the first line
         - selection: provides for a limited subset of properites to style user selected text. Such as the `background-color` and  `color`
